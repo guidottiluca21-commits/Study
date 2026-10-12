@@ -1,0 +1,43 @@
+name: Digest settimanale
+
+on:
+  schedule:
+    - cron: "30 5 * * 1"   # ogni lunedì, 05:30 UTC (07:30 in Italia con l'ora legale, 06:30 con l'ora solare)
+  workflow_dispatch: {}     # esecuzione manuale dalla scheda Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: digest
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installa il client per le sintesi (solo se c'è la chiave)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then pip install "anthropic>=1.0,<2"; fi
+      - name: Genera il report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+        run: python scripts/digest.py
+      - name: Salva il report nel repository
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "digest-bot@users.noreply.github.com"
+          git add data/digest
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica da salvare"
+          else
+            git commit -m "Digest settimanale"
+            git push
+          fi
