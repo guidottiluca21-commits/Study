@@ -52,7 +52,7 @@ function closeDlg() { if ($dlg.open) $dlg.close(); }
 // ---------- stato ----------
 function defaults() {
   return {
-    v: 1, start: todayStr(), levels: {}, overrides: {}, sessions: [],
+    v: 1, start: todayStr(), levels: {}, overrides: {}, sessions: [], unitsDone: {},
     off: {}, light: {}, skipped: {}, saved: {}, dismissed: {},
     baselinePct: null, lastExport: null,
     settings: { weeklyTarget: 4, taskMin: 30, endDate: '', edaicOn: true, edaicDate: '', olaDate: '', rotation: [] },
@@ -92,6 +92,28 @@ const topicById = (id) => topics().find((t) => t.id === id);
 const level = (id) => S.levels[id] || 1;
 const setLevel = (id, l) => { S.levels[id] = l; save(); };
 
+// capitoli (unità di studio) per fonte
+const ALL_UNITS = [];
+Object.entries(window.STUDY_UNITS || {}).forEach(([src, rows]) => rows.forEach((r) => ALL_UNITS.push({
+  id: `${src}:${r[0]}`, src, n: r[0], t: r[1], p1: r[2], p2: r[3], read: r[4] === 'r', tp: r[5],
+  pages: r[3] ? r[3] - r[2] + 1 : null,
+})));
+const unitDone = (u) => !!S.unitsDone[u.id];
+const unitLabel = (u) => `Cap. ${u.n} – ${u.t} (${u.p2 ? `pp. ${u.p1}–${u.p2}, ${u.pages} pag.` : `da p. ${u.p1}`})${u.read ? ' · solo lettura' : ''}`;
+function unitsOfTopic(t) {
+  const mine = ALL_UNITS.filter((u) => u.tp.includes(t.id));
+  return { primary: mine.filter((u) => u.src === t.p), extra: mine.filter((u) => u.src !== t.p) };
+}
+function markUnits(ids, done) {
+  ids.forEach((id) => { if (done) S.unitsDone[id] = todayStr(); else delete S.unitsDone[id]; });
+  save();
+}
+function pagesSummary(src) {
+  const us = ALL_UNITS.filter((u) => u.src === src);
+  const sum = (arr) => arr.reduce((a, u) => a + (u.pages || 0), 0);
+  return { total: sum(us), done: sum(us.filter(unitDone)), n: us.length, nDone: us.filter(unitDone).length };
+}
+
 function lastStudy(tid) {
   let d = null;
   for (const s of S.sessions) if (s.tid === tid && s.type === 'study' && (!d || s.d > d)) d = s.d;
@@ -120,7 +142,8 @@ function pickTask() {
   const list = topics().filter((t) => ok(t.id) && level(t.id) < 4);
   if (!list.length) return null;
   const idx = new Map(D.topics.map((t, i) => [t.id, i]));
-  const score = (t) => (level(t.id) - 1) * 10 + (rot.has(t.a) ? -15 : 0) + (t.p ? 0 : 12) + idx.get(t.id) / 1000;
+  const allDone = (t) => { const pr = unitsOfTopic(t).primary; return pr.length > 0 && pr.every(unitDone); };
+  const score = (t) => (level(t.id) - 1) * 10 + (rot.has(t.a) ? -15 : 0) + (t.p ? 0 : 12) + (allDone(t) ? 25 : 0) + idx.get(t.id) / 1000;
   list.sort((a, b) => score(a) - score(b));
   return { type: 'study', tid: list[0].id };
 }
@@ -190,6 +213,8 @@ function logSession(tid, type, min, lv) {
   save();
 }
 function askFinish(task, minutes) {
+  const pending = unitsOfTopic(topicById(task.tid)).primary.filter((u) => !unitDone(u)).slice(0, 6);
+  const checks = pending.map((u) => h('label', {}, h('input', { type: 'checkbox', 'data-u': u.id }), unitLabel(u)));
   const minInput = h('input', { type: 'number', min: 1, max: 600, value: Math.max(1, minutes), 'aria-label': 'Minuti' });
   const levelButtons = [[2, 'Ricordo poco'], [3, 'Da ripassare'], [4, 'Solido']].map(([l, label]) =>
     h('button', {
@@ -197,11 +222,13 @@ function askFinish(task, minutes) {
       onclick: () => {
         const m = Math.max(1, Math.min(600, parseInt(minInput.value, 10) || 1));
         logSession(task.tid, task.type, m, l);
+        markUnits([...$dlg.querySelectorAll('input[data-u]:checked')].map((c) => c.getAttribute('data-u')), true);
         stopRun(); another = false; closeDlg(); render();
       },
     }, label));
   openDlg('Come è andata?', [
     h('div', { class: 'field' }, h('label', {}, 'Minuti studiati'), minInput),
+    pending.length ? h('div', { class: 'field checks' }, h('label', {}, 'Capitoli completati'), checks) : null,
     h('p', { class: 'muted' }, 'Quanto ricordi di questo argomento?'),
     h('div', { class: 'row' }, levelButtons),
   ], [{ label: 'Annulla' }]);
@@ -233,6 +260,21 @@ function sourceLine(t) {
   if (!t.p) return h('div', { class: 'src' }, h('span', { class: 'none' }, 'Fonte da assegnare'));
   return h('div', { class: 'src' }, 'Fonte: ', h('b', {}, srcName(t.p)), t.ref ? ` – ${t.ref}` : '',
     t.s.length ? ` · Integra con: ${t.s.map(srcName).join(', ')}` : '');
+}
+
+function unitsBlock(t, limit) {
+  const { primary, extra } = unitsOfTopic(t);
+  const todo = primary.filter((u) => !unitDone(u));
+  if (!primary.length && !extra.length) return null;
+  const box = h('div', { class: 'small', style: 'margin-top:8px' });
+  if (primary.length) {
+    box.append(h('div', {}, h('b', {}, todo.length ? 'Da studiare: ' : 'Capitoli della fonte primaria: tutti completati')));
+    todo.slice(0, limit || 3).forEach((u) => box.append(h('div', { class: 'muted' }, '• ', unitLabel(u))));
+    if (todo.length > (limit || 3)) box.append(h('div', { class: 'muted' }, `… e altri ${todo.length - (limit || 3)}`));
+  }
+  const ex = extra.filter((u) => !unitDone(u));
+  if (ex.length) box.append(h('div', { class: 'muted', style: 'margin-top:4px' }, 'Integrazioni: ', ex.slice(0, 3).map((u) => `${srcName(u.src).split(' ')[0]} cap. ${u.n}`).join(', '), ex.length > 3 ? '…' : ''));
+  return box;
 }
 
 function viewToday() {
@@ -287,7 +329,7 @@ function viewToday() {
         h('div', { class: 'kicker' }, task.type === 'review' ? `Ripasso dovuto${task.pending > 1 ? ` (+${task.pending - 1} in coda)` : ''}` : 'Il compito di oggi'),
         h('h2', {}, t.t),
         h('div', { class: 'row', style: 'margin-bottom:8px' }, h('span', { class: 'pill' }, a.name), h('span', { class: 'pill ok' }, `~${estMin} min`), light ? h('span', { class: 'pill warn' }, 'Giornata leggera') : null),
-        sourceLine(t),
+        sourceLine(t), unitsBlock(t),
         task.type === 'review' ? h('p', { class: 'muted small', style: 'margin-top:8px' }, 'Ripasso a intervalli: prova a ricordare prima di riaprire il testo, poi controlla.') : null,
         h('div', { style: 'margin-top:14px' }, h('button', { class: 'primary big', onclick: () => startRun(task) }, `Inizia ${MIN_START} minuti`)),
         h('div', { class: 'row', style: 'margin-top:10px' },
@@ -356,6 +398,23 @@ function editTopic(tid) {
   ]);
 }
 
+function topicUnits(t) {
+  const { primary, extra } = unitsOfTopic(t);
+  if (!primary.length && !extra.length) return null;
+  const nDone = primary.filter(unitDone).length;
+  return h('details', { class: 'units' },
+    h('summary', {}, primary.length ? `Capitoli della fonte primaria: ${nDone}/${primary.length} completati` : 'Capitoli di integrazione'),
+    primary.map(unitRow),
+    extra.length ? h('div', { class: 'muted small', style: 'margin-top:6px' }, 'Integrazioni') : null,
+    extra.map((u) => h('div', { class: 'checks' }, h('div', { class: 'small muted' }, `${srcName(u.src)}: `), unitRow(u))));
+}
+
+function unitRow(u) {
+  return h('label', { class: 'unit' },
+    h('input', Object.assign({ type: 'checkbox', onchange: (e) => { markUnits([u.id], e.target.checked); } }, unitDone(u) ? { checked: true } : {})),
+    h('span', {}, unitLabel(u)));
+}
+
 function viewPlan() {
   const out = [h('h1', {}, 'Piano')];
   const all = topics();
@@ -398,6 +457,24 @@ function viewPlan() {
       gaps.map((t) => h('div', { class: 'topic' }, h('div', { class: 'topic-t' }, t.t), h('div', { class: 'row between' }, h('span', { class: 'src' }, areaOf(t.a).name), h('button', { onclick: () => editTopic(t.id) }, 'Assegna'))))));
   }
 
+  // capitoli per fonte
+  const srcs = Object.keys(window.STUDY_UNITS || {});
+  if (srcs.length) {
+    const card = h('div', { class: 'card' }, h('div', { class: 'kicker' }, 'Avanzamento sulle fonti'), h('h2', {}, 'Capitoli e pagine'));
+    srcs.forEach((src) => {
+      const ps = pagesSummary(src);
+      const pct = ps.total ? Math.round(100 * ps.done / ps.total) : 0;
+      card.append(h('div', { class: 'ms' },
+        h('div', { class: 'row between' }, h('b', {}, srcName(src)), h('span', { class: 'small muted' }, `${ps.nDone}/${ps.n} capitoli`)),
+        h('div', { class: 'bar', style: 'margin:6px 0' }, h('i', { style: `width:${pct}%` })),
+        h('div', { class: 'small muted' }, ps.total ? `${ps.done} di ${ps.total} pagine (restano ${ps.total - ps.done})` : '')));
+    });
+    card.append(h('p', { class: 'muted small' }, 'Le pagine finali dei capitoli del Pinsky sono dedotte dall\'indice (inizio del capitolo successivo) e quindi approssimate. Segna un capitolo come fatto dal suo argomento, oppure importa quelli già studiati in Opzioni.'));
+    const loose = ALL_UNITS.filter((u) => !u.tp.length);
+    if (loose.length) card.append(h('details', { class: 'units' }, h('summary', {}, `Capitoli non associati a un argomento (${loose.length})`), loose.map(unitRow)));
+    out.push(card);
+  }
+
   // aree
   out.push(h('h2', { style: 'margin-top:18px' }, 'Argomenti per area'));
   D.areas.forEach((a) => {
@@ -420,7 +497,8 @@ function viewPlan() {
       h('div', { class: 'row between' }, sourceLine(t), h('button', { class: 'ghost', style: 'min-height:36px;padding:4px 10px', onclick: () => editTopic(t.id), 'aria-label': `Modifica fonte: ${t.t}` }, 'Fonte')),
       h('div', { class: 'lv', role: 'group', 'aria-label': `Livello: ${t.t}` },
         [1, 2, 3, 4].map((l) => h('button', { type: 'button', 'data-l': l, 'aria-pressed': level(t.id) === l ? 'true' : 'false',
-          onclick: () => { setLevel(t.id, l); render(); } }, LEVEL_SHORT[l]))))));
+          onclick: () => { setLevel(t.id, l); render(); } }, LEVEL_SHORT[l]))),
+      topicUnits(t))));
     out.push(det);
   });
   out.push(h('p', { class: 'muted small' }, `Livelli: 1 mai studiato · 2 visto una volta, ricordo poco · 3 studiato, da ripassare · 4 solido. Argomenti a livello ≥ 3: ${cur}%.`));
@@ -531,6 +609,7 @@ function viewSettings() {
       date('s-ola', 'Data dell\'On-Line Assessment', 'olaDate', 'Di solito in aprile; verifica sul sito ESAIC.')),
     h('div', { class: 'card' }, h('h2', {}, 'Rotazione corrente'),
       h('p', { class: 'muted small' }, 'Gli argomenti di queste aree passano avanti. Aggiornala quando cambi reparto.'), rot),
+    importCard(),
     h('div', { class: 'card' }, h('h2', {}, 'Dati e backup'),
       h('p', { class: 'muted small' }, 'I dati sono salvati solo su questo dispositivo. Se cambi telefono o cancelli i dati del browser li perdi: esporta un backup ogni tanto.'),
       h('div', { class: 'row' },
@@ -541,6 +620,31 @@ function viewSettings() {
       S.lastExport ? h('p', { class: 'muted small', style: 'margin-top:8px' }, `Ultimo backup: ${itDate(S.lastExport)}`) : null),
   ];
 }
+function importCard() {
+  const srcs = Object.keys(window.STUDY_UNITS || {});
+  if (!srcs.length) return null;
+  const sel = h('select', { id: 'imp-src' }, srcs.map((s) => h('option', { value: s }, srcName(s))));
+  const txt = h('input', { type: 'text', id: 'imp-nums', placeholder: 'es. 16, 25, 26, 27, 28' });
+  return h('div', { class: 'card' }, h('h2', {}, 'Capitoli già studiati'),
+    h('p', { class: 'muted small' }, 'Scrivi i numeri dei capitoli che hai già completato (separati da virgole) e li segno come fatti. Gli argomenti coperti da tutti i loro capitoli passano almeno a "Da ripassare".'),
+    h('div', { class: 'field' }, h('label', { for: 'imp-src' }, 'Fonte'), sel),
+    h('div', { class: 'field' }, h('label', { for: 'imp-nums' }, 'Numeri dei capitoli'), txt),
+    h('button', { onclick: () => {
+      const nums = txt.value.split(/[^0-9]+/).filter(Boolean).map(Number);
+      const found = ALL_UNITS.filter((u) => u.src === sel.value && nums.includes(u.n));
+      const missing = nums.filter((n) => !found.some((u) => u.n === n));
+      markUnits(found.map((u) => u.id), true);
+      let raised = 0;
+      topics().forEach((t) => {
+        const pr = unitsOfTopic(t).primary;
+        if (pr.length && pr.every(unitDone) && level(t.id) < 3) { S.levels[t.id] = 3; raised++; }
+      });
+      save();
+      openDlg('Fatto', [h('p', {}, `${found.length} capitoli segnati come completati.${raised ? ` ${raised} argomenti portati a "Da ripassare".` : ''}`),
+        missing.length ? h('p', { class: 'muted' }, `Non presenti nell'elenco: ${missing.join(', ')}.`) : null], [{ label: 'OK', primary: true, onClick: () => { render(); } }]);
+    } }, 'Segna come fatti'));
+}
+
 function exportData() {
   S.lastExport = todayStr(); save();
   const blob = new Blob([JSON.stringify(S, null, 2)], { type: 'application/json' });

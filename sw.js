@@ -1,6 +1,6 @@
 /* Service worker: rete prima, cache come ripiego, così gli aggiornamenti arrivano sempre. */
-const CACHE = 'study-v1';
-const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'data/topics.js', 'manifest.webmanifest', 'icons/icon.svg'];
+const CACHE = 'study-v2';
+const SHELL = ['./', 'index.html', 'styles.css', 'app.js', 'data/topics.js', 'data/units.js', 'manifest.webmanifest', 'icons/icon.svg'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

@@ -151,3 +151,8 @@ dialog menu { display: flex; gap: 8px; padding: 0; margin: 14px 0 0; justify-con
 @media (prefers-reduced-motion: no-preference) {
   .bar > i { transition: width .3s; }
 }
+
+details.units { margin-top: 8px; font-size: .9rem; }
+details.units > summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+label.unit { display: flex; gap: 8px; align-items: flex-start; font-weight: 500; padding: 6px 0; font-size: .88rem; }
+label.unit input { width: 20px; height: 20px; flex: none; margin-top: 2px; }

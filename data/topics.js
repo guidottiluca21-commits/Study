@@ -50,11 +50,11 @@ window.STUDY_DATA = {
     // --- Farmacologia ---
     { id: "fa1", a: "farm", t: "Principi di farmacocinetica", p: "stoelting", s: [] },
     { id: "fa2", a: "farm", t: "Farmacodinamica e interazione farmaco-recettore", p: "stoelting", s: [] },
-    { id: "fa3", a: "farm", t: "Anestetici inalatori", p: "stoelting", s: ["miller"] },
-    { id: "fa4", a: "farm", t: "Anestetici endovenosi e ipnotici", p: "stoelting", s: ["miller"] },
-    { id: "fa5", a: "farm", t: "Oppioidi", p: "stoelting", s: ["miller"] },
-    { id: "fa6", a: "farm", t: "Miorilassanti e decurarizzazione", p: "stoelting", s: ["miller"] },
-    { id: "fa7", a: "farm", t: "Anestetici locali", p: "stoelting", s: ["miller"] },
+    { id: "fa3", a: "farm", t: "Anestetici inalatori", p: "miller", s: ["stoelting"] },
+    { id: "fa4", a: "farm", t: "Anestetici endovenosi e ipnotici", p: "miller", s: ["stoelting"] },
+    { id: "fa5", a: "farm", t: "Oppioidi", p: "miller", s: ["stoelting"] },
+    { id: "fa6", a: "farm", t: "Miorilassanti e decurarizzazione", p: "miller", s: ["stoelting"] },
+    { id: "fa7", a: "farm", t: "Anestetici locali", p: "miller", s: ["stoelting"] },
     { id: "fa8", a: "farm", t: "Farmaci cardiovascolari e vasoattivi", p: "stoelting", s: ["ohs"] },
     { id: "fa9", a: "farm", t: "Tossicità e interazioni; farmaci di uso internistico", p: "stoelting", s: [] },
 
@@ -64,14 +64,15 @@ window.STUDY_DATA = {
     { id: "fi3", a: "fisio", t: "Scambi gassosi e trasporto di O2 e CO2 (curva di dissociazione, Bohr, Haldane, P50)", p: "fisio", s: ["miller"] },
     { id: "fi4", a: "fisio", t: "Controllo della respirazione", p: "fisio", s: [] },
     { id: "fi5", a: "fisio", t: "Fisiologia respiratoria in anestesia (CRF, atelettasie, chiusura delle vie aeree, vasocostrizione ipossica)", p: "miller", s: ["tobin", "fisio"] },
-    { id: "fi6", a: "fisio", t: "Fisiologia cardiovascolare", p: null, s: [] },
-    { id: "fi7", a: "fisio", t: "Fisiologia renale ed equilibrio idroelettrolitico", p: null, s: [] },
-    { id: "fi8", a: "fisio", t: "Fisiologia epatica e metabolismo", p: null, s: [] },
-    { id: "fi9", a: "fisio", t: "Neurofisiologia (flusso cerebrale, pressione intracranica)", p: null, s: [] },
+    { id: "fi6", a: "fisio", t: "Fisiologia cardiovascolare", p: "miller", s: [] },
+    { id: "fi7", a: "fisio", t: "Fisiologia renale ed equilibrio idroelettrolitico", p: "miller", s: [] },
+    { id: "fi8", a: "fisio", t: "Fisiologia epatica e metabolismo", p: "miller", s: [] },
+    { id: "fi9", a: "fisio", t: "Neurofisiologia (sistema nervoso autonomo, flusso cerebrale, pressione intracranica, sonno)", p: "miller", s: [] },
     { id: "fi10", a: "fisio", t: "Endocrinologia", p: null, s: [] },
     { id: "fi11", a: "fisio", t: "Coagulazione ed emostasi", p: null, s: [] },
-    { id: "fi12", a: "fisio", t: "Equilibrio acido-base", p: null, s: [] },
+    { id: "fi12", a: "fisio", t: "Equilibrio acido-base", p: "miller", s: [] },
     { id: "fi13", a: "fisio", t: "Fisiologia in gravidanza, età pediatrica e anziano", p: null, s: [] },
+    { id: "fi14", a: "fisio", t: "Fisiologia gastrointestinale", p: "miller", s: [] },
 
     // --- Fisica e misure ---
     { id: "ph1", a: "fisica", t: "Fisica di gas, liquidi e vapori (leggi dei gas)", p: null, s: [] },
@@ -100,10 +101,12 @@ window.STUDY_DATA = {
     { id: "ac13", a: "anest", t: "Anestesia fuori sala (NORA) e ambulatoriale", p: "miller", s: [] },
     { id: "ac14", a: "anest", t: "Cura perioperatoria, emergenze perioperatorie e analgesia postoperatoria", p: "miller", s: [] },
     { id: "ac15", a: "anest", t: "Complicanze e incidenti critici in anestesia", p: "miller", s: [] },
+    { id: "ac16", a: "anest", t: "Anestesia per specialità chirurgiche (ortopedica, ORL, urologica, epatobiliare, bariatrica, robotica)", p: "miller", s: [] },
+    { id: "ac17", a: "anest", t: "Anestesia per trapianto ed espianto di organi; morte cerebrale", p: "miller", s: [] },
 
     // --- Rianimazione ed emergenza ---
     { id: "em1", a: "emerg", t: "Rianimazione cardiopolmonare: BLS e ALS (adulto e pediatrico)", p: null, s: ["lezioni"] },
-    { id: "em2", a: "emerg", t: "Medicina d'emergenza, assistenza preospedaliera e trauma", p: null, s: ["lezioni"] },
+    { id: "em2", a: "emerg", t: "Medicina d'emergenza, assistenza preospedaliera e trauma", p: "miller", s: ["lezioni"] },
 
     // --- Terapia intensiva ---
     { id: "ti1", a: "ti", t: "Insufficienza respiratoria acuta e ARDS", p: "ohs", s: ["tobin"] },
@@ -125,7 +128,7 @@ window.STUDY_DATA = {
 
     // --- Dolore e cure palliative ---
     { id: "do1", a: "dolore", t: "Fisiologia del dolore", p: null, s: [] },
-    { id: "do2", a: "dolore", t: "Terapia del dolore acuto e cronico; approccio multidisciplinare", p: null, s: ["miller"] },
-    { id: "do3", a: "dolore", t: "Controllo dei sintomi e cure palliative", p: null, s: [] }
+    { id: "do2", a: "dolore", t: "Terapia del dolore acuto e cronico; approccio multidisciplinare", p: "miller", s: [] },
+    { id: "do3", a: "dolore", t: "Controllo dei sintomi e cure palliative", p: "miller", s: [] }
   ]
 };
