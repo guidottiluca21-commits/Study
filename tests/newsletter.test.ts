@@ -4,7 +4,6 @@ import { join } from 'node:path';
 import { composeNewsletter, subjectFor, type NewsletterInput } from '../src/core/newsletter';
 import { summarizeAbstract } from '../src/core/summary';
 import { rankForUser } from '../src/core/rank';
-import { planWeek } from '../src/core/planner';
 import { scoreImportance } from '../src/core/scoring';
 import { parsePubmedXml } from '../src/core/pubmed';
 import type { Candidate, CoreItem, RankedItem, UserPrefs } from '../src/core/types';
@@ -23,11 +22,9 @@ const coreItem: CoreItem = {
 };
 
 function input(recent: RankedItem[], withCore = true, extra: Partial<NewsletterInput> = {}): NewsletterInput {
-  const plan = planWeek([...(withCore ? [{ key: 'core', minutes: 30 }] : []), ...recent.map((r) => ({ key: r.article.pmid, minutes: r.minutes }))], prefs.rest_days);
   return {
     weekStart: '2026-10-12', userName: 'Dr Rossi', recent,
     core: withCore ? { pick: { item: coreItem, topic: { id: 'ards', category_id: 'ards', title_it: 'ARDS', title_en: 'ARDS', sort_order: 1, active: true }, reason: 'new', note: 'Prossimo passo del percorso «ARDS».', unmetPrerequisites: [] }, topicTitle: 'ARDS', prerequisiteTitles: ['Berlin Definition'] } : null,
-    plan, planLabels: { core: 'Core: ' + coreItem.title, ...Object.fromEntries(recent.map((r) => [r.article.pmid, r.article.title])) },
     transparency: { searchedAt: new Date('2026-10-12T03:30:00Z'), windowFrom: '2026-10-02', windowTo: '2026-10-12', overlapDays: 3, candidatesConsidered: 40, alreadyReceived: 2, belowThreshold: 30, notes: [], scoringVersion: '1.0.0' },
     categoryNames: names,
     links: { site: 'https://example.github.io/study/', unsubscribe: 'https://example.github.io/study/#/unsubscribe/abc-token', manage: 'https://example.github.io/study/#/preferences', privacy: 'https://example.github.io/study/#/privacy' },
@@ -52,8 +49,8 @@ describe('contenuto della newsletter', () => {
   const out = composeNewsletter(input(recent));
 
   it('contiene tutte le sezioni richieste', () => {
-    for (const s of ['In sintesi', 'Recent Evidence', 'Core Knowledge', 'Piano settimanale', 'Trasparenza']) expect(out.html).toContain(s);
-    for (const s of ['IN SINTESI', 'RECENT EVIDENCE', 'CORE KNOWLEDGE', 'PIANO SETTIMANALE', 'TRASPARENZA']) expect(out.text).toContain(s);
+    for (const s of ['In sintesi', 'Recent Evidence', 'Core Knowledge', 'Trasparenza']) expect(out.html).toContain(s);
+    for (const s of ['IN SINTESI', 'RECENT EVIDENCE', 'CORE KNOWLEDGE', 'TRASPARENZA']) expect(out.text).toContain(s);
   });
   it('sintesi esecutiva: al massimo 5 punti, con evidenza practice-changing e obiettivo di apprendimento', () => {
     expect(out.executiveSummary.length).toBeLessThanOrEqual(5);
@@ -80,10 +77,9 @@ describe('contenuto della newsletter', () => {
     expect(out.html).toMatch(/Criteri:/);
     expect(out.html).toMatch(/Limiti:/);
   });
-  it('il piano settimanale rispetta i giorni liberi e il tempo', () => {
-    expect(out.html).toMatch(/Sabato<\/td><td[^>]*><span[^>]*>Giorno libero/);
-    expect(out.text).toMatch(/Sabato\s+Giorno libero/);
-    expect(out.totalMinutes).toBe(recent.reduce((a, r) => a + r.minutes, 0) + 30);
+  it('non contiene alcuna programmazione dello studio (niente piano, giorni liberi o budget)', () => {
+    expect(out.html).not.toMatch(/Piano settimanale|Giorno libero/);
+    expect(out.text).not.toMatch(/PIANO SETTIMANALE|Giorno libero/);
   });
   it('contiene link di disiscrizione e preferenze e l\'avvertenza clinica', () => {
     expect(out.html).toContain('#/unsubscribe/abc-token');

@@ -63,12 +63,12 @@ describe('flusso completo (demo): registrazione, onboarding, dashboard, newslett
 
     // preferenze: modifica e salva
     await page.getByRole('link', { name: 'Preferenze' }).first().click();
-    await page.getByLabel('Numero massimo di letture a settimana').fill('4');
+    await page.getByLabel('Quante novità vuoi ricevere ogni lunedì?').fill('4');
     await page.getByRole('button', { name: 'Salva le preferenze' }).click();
     await page.getByText('Preferenze salvate').first().waitFor();
     await shot(page, '08-preferences');
     await page.reload();
-    expect(await page.getByLabel('Numero massimo di letture a settimana').inputValue()).toBe('4');
+    expect(await page.getByLabel('Quante novità vuoi ricevere ogni lunedì?').inputValue()).toBe('4');
 
     // account: esportazione senza password, pausa/ripresa, eliminazione
     await page.getByRole('link', { name: 'Account' }).first().click();

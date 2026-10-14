@@ -144,11 +144,6 @@ describe('esecuzione settimanale: ricerca condivisa, catalogo, selezioni diverse
     expect(await count(w, `from public.user_articles where user_id = $1`, [w.users.alice])).toBeGreaterThan(0);
   });
 
-  it('rispetta i giorni liberi: Bob (sabato e domenica liberi) non ha letture nel weekend', async () => {
-    const r = await w.raw.query<{ planned_day: number }>(`select ni.planned_day from public.newsletter_items ni join public.newsletter_issues i on i.id=ni.issue_id where i.user_id=$1`, [w.users.bob]);
-    for (const row of r.rows) expect([5, 6]).not.toContain(row.planned_day);
-  });
-
   it('nessuna e-mail per carol/dave/erin/frank e nessuno stato creato per loro', async () => {
     for (const k of ['carol', 'dave', 'erin', 'frank']) {
       expect(await count(w, `from public.newsletter_issues where user_id = $1`, [w.users[k]]), k).toBe(0);
@@ -328,7 +323,7 @@ describe('simulazione: nessun effetto reale', () => {
 });
 
 describe('continuità settimana dopo settimana', () => {
-  it('nessuna ripetizione di articoli o di Core, il Core avanza e il budget di lettura è rispettato', async () => {
+  it('nessuna ripetizione di articoli o di Core, il Core avanza e il numero di novità scelto è rispettato', async () => {
     const w = await world(); sink.reset();
     await raw(w, `update public.preferences set weekly_minutes = 60, max_weekly_reads = 4 where user_id = '${w.users.alice}'`);
     await runWeekly(opts(w, smtpMailer(sink.cfg, { sleep: nosleep })));
@@ -346,13 +341,10 @@ describe('continuità settimana dopo settimana', () => {
     // nessun articolo recente ripetuto tra le due settimane
     const arts = (await w.raw.query<{ article_id: number }>(`select ni.article_id from public.newsletter_items ni join public.newsletter_issues i on i.id=ni.issue_id where i.user_id=$1 and ni.kind='recent'`, [w.users.alice])).rows.map((r) => r.article_id);
     expect(new Set(arts).size).toBe(arts.length);
-    // budget: 60 minuti totali a settimana (Core + novità)
+    // il numero scelto (4) riguarda le novità; il Core si aggiunge a parte
     for (const iss of issues) {
-      const mins = Number((await w.raw.query<{ m: number }>(`select coalesce(sum(minutes),0)::int m from public.newsletter_items where issue_id=$1`, [iss.id])).rows[0]!.m);
-      expect(mins).toBeLessThanOrEqual(60 + 40); // il Core (fino a 60 min) può eccedere il budget, le novità no
-      const recentMins = Number((await w.raw.query<{ m: number }>(`select coalesce(sum(minutes),0)::int m from public.newsletter_items where issue_id=$1 and kind='recent'`, [iss.id])).rows[0]!.m);
-      const coreMins = mins - recentMins;
-      expect(recentMins).toBeLessThanOrEqual(Math.max(0, 60 - coreMins));
+      const n = Number((await w.raw.query<{ n: number }>(`select count(*)::int n from public.newsletter_items where issue_id=$1 and kind='recent'`, [iss.id])).rows[0]!.n);
+      expect(n).toBeLessThanOrEqual(4);
     }
   });
 

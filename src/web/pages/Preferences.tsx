@@ -26,7 +26,7 @@ export function Preferences() {
       <PageHead eyebrow="Personalizzazione" title="Preferenze">Le tue scelte riguardano solo il tuo digest.</PageHead>
       <section className="section" aria-labelledby="p-topics"><h2 id="p-topics">Argomenti</h2><TopicPicker state={live} topics={topics} setTopics={setTopics} /></section>
       <section className="section" aria-labelledby="p-prio"><h2 id="p-prio">Priorità</h2><PriorityList state={live} topics={topics} setTopics={setTopics} /></section>
-      <section className="section" aria-labelledby="p-time"><h2 id="p-time">Letture e tempo</h2><TimeFields prefs={prefs} setPrefs={setPrefs} /></section>
+      <section className="section" aria-labelledby="p-time"><h2 id="p-time">Numero di letture</h2><TimeFields prefs={prefs} setPrefs={setPrefs} /></section>
       <section className="section" aria-labelledby="p-core"><h2 id="p-core">Core Knowledge</h2><CorePicker state={live} ids={coreIds} setIds={setCoreIds} enabled={prefs.core_enabled} setEnabled={(b) => setPrefs({ ...prefs, core_enabled: b })} /></section>
       <Note>Per sospendere gli invii, annullare l'iscrizione, cambiare e-mail, esportare o eliminare i tuoi dati vai a <a href="#/account">Account</a>.</Note>
       <div className="row"><button className="btn" onClick={save} disabled={busy}>{busy ? 'Salvo…' : 'Salva le preferenze'}</button><a className="btn secondary" href="#/preview">Vedi l'anteprima</a></div>

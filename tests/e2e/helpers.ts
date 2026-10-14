@@ -76,10 +76,13 @@ export async function completeOnboarding(page: Page) {
   await page.getByRole('heading', { name: 'Quanto è importante ciascun argomento?' }).waitFor();
   await page.getByLabel('Priorità 5 su 5').first().check({ force: true });
   await page.getByRole('button', { name: 'Avanti' }).click();
-  await page.getByRole('heading', { name: 'Quanto tempo vuoi dedicare?' }).waitFor();
-  await page.getByLabel('Tempo di studio a settimana (minuti)').fill('180');
-  await page.getByLabel('Sabato').check();
-  await page.getByLabel('Domenica').check();
+  await page.getByRole('heading', { name: 'Quante novità vuoi ricevere?' }).waitFor();
+  // il campo deve accettare qualsiasi numero scritto a mano (bug segnalato: solo 6 o 21)
+  const count = page.getByLabel('Quante novità vuoi ricevere ogni lunedì?');
+  await count.fill('');
+  await count.pressSequentially('3');
+  await count.blur();
+  if ((await count.inputValue()) !== '3') throw new Error('il campo numerico non accetta 3');
   await page.getByRole('button', { name: 'Avanti' }).click();
   await page.getByRole('heading', { name: 'Percorso Core Knowledge' }).waitFor();
   await page.getByRole('button', { name: 'Avanti' }).click();

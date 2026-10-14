@@ -4,7 +4,6 @@
  * trattato come non attendibile e viene sempre escapato.
  */
 import type { CorePick } from './curriculum.ts';
-import type { PlanDay } from './planner.ts';
 import type { ArticleRecord, CoreItem, RankedItem } from './types.ts';
 import { STUDY_TYPE_LABEL_IT } from './types.ts';
 import { escapeHtml as esc } from './text.ts';
@@ -27,8 +26,6 @@ export interface NewsletterInput {
   userName?: string | null;
   recent: RankedItem[];
   core: { pick: CorePick; topicTitle: string; prerequisiteTitles: string[] } | null;
-  plan: { days: PlanDay[]; unplanned: { key: string; minutes: number }[] };
-  planLabels: Record<string, string>; // key -> titolo breve
   transparency: Transparency;
   categoryNames: Record<string, string>;
   links: { site: string; unsubscribe: string; manage: string; privacy: string };
@@ -123,19 +120,6 @@ export function composeNewsletter(inp: NewsletterInput): NewsletterOutput {
   if (core) {
     h.push(section('Core Knowledge — articolo fondamentale'));
     h.push(renderCore(core, inp));
-  }
-
-  // Piano settimanale
-  const hasPlan = inp.plan.days.some((d) => d.items.length);
-  if (hasPlan) {
-    h.push(section('Piano settimanale'));
-    h.push(`<tr><td style="padding:6px 24px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font:400 14px/1.5 ${FONT};color:${COLORS.text}">`);
-    for (const d of inp.plan.days) {
-      const body = d.rest ? `<span style="color:${COLORS.muted}">Giorno libero</span>` : d.items.length ? d.items.map((it) => `${esc(inp.planLabels[it.key] ?? it.key)} <span style="color:${COLORS.muted}">(${it.minutes} min)</span>`).join('<br>') : `<span style="color:${COLORS.muted}">Recupero / nessuna lettura</span>`;
-      h.push(`<tr><td valign="top" width="96" style="padding:6px 8px 6px 0;border-top:1px solid ${COLORS.line};font-weight:600">${esc(d.name)}</td><td style="padding:6px 0;border-top:1px solid ${COLORS.line}">${body}</td></tr>`);
-    }
-    h.push('</table></td></tr>');
-    h.push(para('Obiettivo abituale: una o due letture al giorno, con giorni liberi o di recupero. Puoi spostare le letture come preferisci.', `color:${COLORS.muted};font-size:13px`));
   }
 
   // Trasparenza
@@ -249,12 +233,6 @@ function renderText(inp: NewsletterInput, subject: string, exec: string[], total
     L.push(`   Prerequisiti: ${inp.core.prerequisiteTitles.length ? inp.core.prerequisiteTitles.join('; ') : 'nessuno'}`);
     if (inp.core.pick.note) L.push(`   ${inp.core.pick.note}`);
     L.push(`   Tempo stimato: ${it.reading_minutes} min`, `   ${it.pmid ? pubmedUrl(it.pmid) : ''}${it.doi ? `  DOI: ${doiUrl(it.doi)}` : ''}`, '   (Motivazione e obiettivi: bozza editoriale non ancora rivista da un clinico.)');
-  }
-  if (inp.plan.days.some((d) => d.items.length)) {
-    L.push('', 'PIANO SETTIMANALE');
-    for (const d of inp.plan.days) {
-      L.push(`   ${d.name.padEnd(10)} ${d.rest ? 'Giorno libero' : d.items.length ? d.items.map((x) => `${inp.planLabels[x.key] ?? x.key} (${x.minutes} min)`).join(' + ') : 'Recupero / nessuna lettura'}`);
-    }
   }
   L.push('', 'TRASPARENZA');
   transparencyLines(inp).forEach((l) => L.push(`- ${l}`));

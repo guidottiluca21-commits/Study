@@ -12,7 +12,7 @@ export function Privacy() {
       <h2>Quali dati raccogliamo</h2>
       <ul>
         <li><strong>Indirizzo e-mail</strong> e password (la password è gestita dal servizio di autenticazione in forma cifrata; il gestore non può leggerla).</li>
-        <li><strong>Preferenze</strong>: argomenti e priorità, tempo di studio, giorni liberi, tipologie di studio.</li>
+        <li><strong>Preferenze</strong>: argomenti e priorità, numero di letture settimanali, tipologie di studio.</li>
         <li><strong>Libreria e progressi</strong>: articoli ricevuti, salvati o completati, avanzamento nel percorso Core Knowledge.</li>
         <li><strong>Registro dei consensi</strong> e delle disiscrizioni; <strong>registro tecnico degli invii</strong> (esito, data).</li>
       </ul>

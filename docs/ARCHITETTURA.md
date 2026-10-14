@@ -19,7 +19,7 @@ GitHub Actions (cron lunedì) ── pipeline TypeScript ──────┘  
 1. Due cron (03:15 e 04:15 UTC del lunedì). `decideRun` calcola l'ora **reale** di Roma: avvia solo dalle 05:00 alle 12:00 locali, attende fino alle 06:00 se serve, segna `late` se in ritardo. Gestisce ora legale/solare (testato).
 2. Ricerca PubMed condivisa per categoria con finestra su data di inserimento (EDAT) e 3 giorni di sovrapposizione + riesame degli ultimi 60 giorni (tag/MeSH assegnati in ritardo). Lo stato di ricerca **non avanza** se una categoria fallisce.
 3. Deduplica per PMID/DOI, classificazione, punteggio di importanza, salvataggio.
-4. Per ogni utente idoneo (attivo, iscritto con consenso, non bloccato, e-mail verificata, non in pausa, giorno non "libero"): ranking personale, Core, piano, newsletter; salvataggio con vincolo `unique(user_id, week_start)`.
+4. Per ogni utente idoneo (attivo, iscritto con consenso, non bloccato, e-mail verificata, non in pausa): ranking personale, un articolo Core, newsletter; salvataggio con vincolo `unique(user_id, week_start)`.
 5. Invio con `idempotency_key` univoca, retry con backoff sugli errori temporanei, controllo quota giornaliera, ricontrollo dell'iscrizione **subito prima** dell'invio. Se non c'è nulla di rilevante, **non si invia nulla** (nessun riempitivo).
 6. Esito registrato in `automation_runs`; `partial`/`failed` ⇒ exit code ≠ 0 ⇒ workflow rosso ⇒ notifica GitHub all'amministratore.
 

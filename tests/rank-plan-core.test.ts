@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
 import { rankForUser, estimateMinutes } from '../src/core/rank';
-import { planWeek } from '../src/core/planner';
 import { pickCoreItem } from '../src/core/curriculum';
 import { classifyArticle } from '../src/core/classify';
 import { scoreImportance } from '../src/core/scoring';
@@ -59,10 +58,11 @@ describe('ranking personalizzato', () => {
     expect(budget.selected.length).toBe(2); // 2 × 20 min = 40
   });
 
-  it('il tempo riservato all\'articolo Core riduce il budget delle novità', () => {
-    const many = Array.from({ length: 6 }, (_, i) => cand(rct(`Sepsis trial ${i}`), { sepsis: 0.9 }));
-    const r = rankForUser(many, prefs({ topics: { sepsis: 5 }, weekly_minutes: 60, max_weekly_reads: 10 }), ctx({ coreMinutes: 30, coreCount: 1 }));
-    expect(r.selected.reduce((a, s) => a + s.minutes, 0)).toBeLessThanOrEqual(30);
+  it('il numero scelto riguarda le novità: il Core si aggiunge a parte e non c\'è alcun budget di tempo', () => {
+    const many = Array.from({ length: 8 }, (_, i) => cand(rct(`Sepsis trial ${i}`), { sepsis: 0.9 }));
+    const r = rankForUser(many, prefs({ topics: { sepsis: 5 }, weekly_minutes: 15, max_weekly_reads: 6 }), ctx({ coreMinutes: 60, coreCount: 1 }));
+    // con il vecchio budget (15 − 60 minuti) non sarebbe stato selezionato nulla; resta solo il tetto per categoria
+    expect(r.selected).toHaveLength(2);
   });
 
   it('un tetto per categoria evita la monocultura', () => {
@@ -139,30 +139,6 @@ describe('classificazione per categoria', () => {
   });
 });
 
-describe('piano settimanale', () => {
-  const items = [1, 2, 3, 4, 5].map((i) => ({ key: `a${i}`, minutes: 20 }));
-  it('distribuisce da lunedì a domenica, una lettura al giorno quando possibile', () => {
-    const { days, unplanned } = planWeek(items, []);
-    expect(unplanned).toHaveLength(0);
-    expect(days.map((d) => d.items.length)).toEqual([1, 1, 1, 1, 1, 0, 0]);
-  });
-  it('non pianifica nei giorni liberi', () => {
-    const { days } = planWeek(items, [5, 6]);
-    expect(days[5]!.items).toHaveLength(0);
-    expect(days[6]!.items).toHaveLength(0);
-    expect(days.filter((d) => !d.rest).every((d) => d.items.length === 1)).toBe(true);
-  });
-  it('massimo due letture al giorno; le altre restano non pianificate', () => {
-    const many = Array.from({ length: 9 }, (_, i) => ({ key: `m${i}`, minutes: 10 }));
-    const { days, unplanned } = planWeek(many, [4, 5, 6]);
-    expect(Math.max(...days.map((d) => d.items.length))).toBe(2);
-    expect(unplanned).toHaveLength(1);
-  });
-  it('tutti i giorni liberi: nessuna pianificazione', () => {
-    const { unplanned } = planWeek(items, [0, 1, 2, 3, 4, 5, 6]);
-    expect(unplanned).toHaveLength(5);
-  });
-});
 
 describe('percorso Core Knowledge', () => {
   const topics: CoreTopic[] = [
