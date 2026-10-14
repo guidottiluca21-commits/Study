@@ -127,7 +127,7 @@ function buildReason(s: { c: Candidate; personal: number; primary: string | null
   const catName = s.primary ? ctx.categoryNames[s.primary] ?? s.primary : null;
   const type = STUDY_TYPE_LABEL_IT[s.c.article.study_type].toLowerCase();
   if (s.override) {
-    return `Evidenza potenzialmente practice-changing, proposta indipendentemente dalle tue priorità (criteri verificabili elencati sotto). Argomento: ${catName ?? 'n/d'}; ${type}.`;
+    return `Evidenza potenzialmente practice-changing, proposta indipendentemente dalle tue priorità (criteri verificabili nel riquadro dell'articolo). Argomento: ${catName ?? 'n/d'}; ${type}.`;
   }
   const p = s.primary ? prefs.topics[s.primary] : undefined;
   const parts: string[] = [];
