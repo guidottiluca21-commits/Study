@@ -244,7 +244,8 @@ create table public.newsletter_items (
 
 create table public.email_deliveries (
   id                  uuid primary key default gen_random_uuid(),
-  issue_id            uuid not null references public.newsletter_issues (id) on delete cascade,
+  -- le e-mail di prova non creano una newsletter archiviata: issue_id nullo solo per kind = 'test'
+  issue_id            uuid references public.newsletter_issues (id) on delete cascade,
   user_id             uuid not null references public.profiles (id) on delete cascade,
   kind                text not null default 'newsletter' check (kind in ('newsletter', 'test')),
   -- chiave di idempotenza: un solo invio per utente/settimana/tipo
@@ -256,7 +257,8 @@ create table public.email_deliveries (
   last_error          text,
   created_at          timestamptz not null default now(),
   sent_at             timestamptz,
-  updated_at          timestamptz not null default now()
+  updated_at          timestamptz not null default now(),
+  check (kind = 'test' or issue_id is not null)
 );
 create index email_deliveries_status_idx on public.email_deliveries (status, created_at);
 
