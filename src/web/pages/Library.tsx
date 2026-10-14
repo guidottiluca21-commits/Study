@@ -46,7 +46,7 @@ export function Library() {
             <li key={r.article_id}>
               <p className="item-title"><a href={pubmed(r.pmid)} target="_blank" rel="noopener noreferrer">{r.title}</a></p>
               <p className="meta">{STUDY_TYPE_LABEL_IT[r.study_type]} · {r.journal} · ricevuto il {fmtDate(r.received_at)}</p>
-              <div className="row" role="group" aria-label={`Cambia stato: ${r.title}`}>
+              <div className="row actions" role="group" aria-label={`Cambia stato: ${r.title}`}>
                 {ACTIONS.map((a) => <button key={a.key} className={`btn small ${r.status === a.key ? '' : 'secondary'}`} aria-pressed={r.status === a.key} onClick={() => setStatus(r, a.key)}>{a.label}</button>)}
               </div>
             </li>

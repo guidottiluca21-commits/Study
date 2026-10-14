@@ -6,7 +6,7 @@
 ## Verificato dai test automatici (in locale)
 - **Database/RLS** (PGlite, Postgres reale in WASM): isolamento tra utenti, nessuna escalation di ruolo, anon senza accesso, tabelle operative chiuse, admin solo aggregati/indirizzi mascherati, consensi, disiscrizione con token, export, eliminazione account, idempotenza a vincolo. Mutation check: disattivare RLS o concedere update su `profiles` fa fallire i test.
 - **PubMed**: parsing su record reali (incl. entità `&#x3b2;`), tipo di studio da tag e da testo, finestra di ricerca con sovrapposizione, query; ricerche live opzionali.
-- **Punteggio/override/ranking/piano/Core**: determinismo, il prestigio della rivista non conta, soglie, tetti, budget, giorni liberi, nessuna ripetizione, prerequisiti, simulazione di 12 settimane, utenti diversi → percorsi diversi.
+- **Punteggio/override/ranking/Core**: determinismo, il prestigio della rivista non conta, soglie, tetti, numero di novità scelto, nessuna programmazione dello studio, nessuna ripetizione, prerequisiti, simulazione di 12 settimane, utenti diversi → percorsi diversi.
 - **Newsletter**: oggetto esatto, sezioni, link PubMed/DOI, escape HTML, testo equivalente, contrasto ≥ 4.5:1, nessun riempitivo.
 - **Pipeline** (PGlite + server SMTP reale locale): idempotenza, retry/backoff (451), errore permanente (550), quota, errori PubMed (429/giù), categoria fallita senza avanzamento, recupero record indicizzati in ritardo, disiscrizione durante l'invio, allowlist, simulazione senza effetti, richieste di prova.
 - **Orari**: ora legale/solare, due cron, ritardo.

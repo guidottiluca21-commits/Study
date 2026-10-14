@@ -185,13 +185,13 @@ async function pipeline(o: RunOptions, q: Queryable, tx: TxRunner, weekStart: st
           unsubscribe: `${o.config.siteUrl}#/unsubscribe/${user.unsubscribe_token}`,
         },
       });
-      const { out, recent, core, plan, dayOf } = built;
+      const { out, recent, core } = built;
       if (!recent.length && !core) { st.skipped_no_content = (st.skipped_no_content as number) + 1; continue; }
 
-      const items = buildItems(recent, core, dayOf);
+      const items = buildItems(recent, core);
       const created = await tx((t) => S.createIssue(t, {
         userId: user.id, weekStart, subject: out.subject, html: out.html, text: out.text, items, coreReason: core?.reason, now,
-        payload: { scoring_version: FORMULA_VERSION, executive_summary: out.executiveSummary, total_minutes: out.totalMinutes, plan: plan.days.map((d) => ({ day: d.day, rest: d.rest, items: d.items })) },
+        payload: { scoring_version: FORMULA_VERSION, executive_summary: out.executiveSummary, total_minutes: out.totalMinutes },
       }));
       if (created.created) st.issues_created = (st.issues_created as number) + 1; else st.issues_reused = (st.issues_reused as number) + 1;
       previews.push({ userId: user.id, email: user.email, subject: out.subject, empty: out.empty, html: live ? undefined : out.html, text: live ? undefined : out.text, selected: recent.length, core: core?.item.id ?? null, overrides: recent.filter((r) => r.override_applied).length });
@@ -212,15 +212,15 @@ async function pipeline(o: RunOptions, q: Queryable, tx: TxRunner, weekStart: st
   return { status: failed ? 'partial' : 'success', weekStart, stats: st, previews, errors, warnings };
 }
 
-function buildItems(recent: RankedItem[], core: CorePick | null, dayOf: Map<string, number>): S.IssueItemInput[] {
+function buildItems(recent: RankedItem[], core: CorePick | null): S.IssueItemInput[] {
   const items: S.IssueItemInput[] = [];
   let pos = 1;
   if (core) {
-    items.push({ position: pos++, kind: 'core', core_item_id: core.item.id, planned_day: dayOf.get('core') ?? null, minutes: core.item.reading_minutes, reason: core.note, personal: null, importance: null, final: null, override: false });
+    items.push({ position: pos++, kind: 'core', core_item_id: core.item.id, planned_day: null, minutes: core.item.reading_minutes, reason: core.note, personal: null, importance: null, final: null, override: false });
   }
   for (const r of recent) {
     items.push({
-      position: pos++, kind: 'recent', article_id: (r.article as { id?: number }).id ?? null, planned_day: dayOf.get(r.article.pmid) ?? null,
+      position: pos++, kind: 'recent', article_id: (r.article as { id?: number }).id ?? null, planned_day: null,
       minutes: r.minutes, reason: r.reason, personal: r.personal_score, importance: r.importance, final: r.final_score, override: r.override_applied,
     });
   }

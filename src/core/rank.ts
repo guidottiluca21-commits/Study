@@ -89,19 +89,17 @@ export function rankForUser(cands: Candidate[], prefs: UserPrefs, ctx: RankConte
     ...rest.filter((s) => !overflowOverrides.has(s.c.article.pmid) || s.personal >= C.minPersonal),
   ];
 
-  const limit = Math.max(0, Math.min(prefs.max_weekly_reads - ctx.coreCount, C.recentCap));
-  let budget = Math.max(0, prefs.weekly_minutes - ctx.coreMinutes);
+  // Il numero scelto dall'utente riguarda le novità; l'articolo fondamentale (Core) si aggiunge a parte.
+  const limit = Math.max(0, Math.min(prefs.max_weekly_reads, C.recentCap));
   const perCat = new Map<string, number>();
   const selected: RankedItem[] = [];
 
   for (const s of ordered) {
     if (selected.length >= limit) { excluded.budget_or_cap++; continue; }
     const minutes = estimateMinutes(s.c.article.study_type);
-    if (minutes > budget) { excluded.budget_or_cap++; continue; }
     const cat = s.primary ?? '_';
     if (!s.override && (perCat.get(cat) ?? 0) >= C.perCategoryCap) { excluded.budget_or_cap++; continue; }
     perCat.set(cat, (perCat.get(cat) ?? 0) + 1);
-    budget -= minutes;
     selected.push({
       article: s.c.article,
       primary_category: s.primary,

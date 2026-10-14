@@ -13,7 +13,7 @@ Fa passare un articolo **anche fuori dalle priorità dell'utente**, al massimo 2
 Se il tipo è dedotto dal testo (tag mancante) l'override lo dichiara "da verificare".
 
 ## Ranking personale
-`finale = 0.5 × rilevanza_personale + 0.5 × importanza`. Rilevanza = peso priorità (1→0.3 … 5→1) × corrispondenza della categoria; bonus +10 / malus −5 per il tipo di studio preferito. Soglie: personale ≥ 30 e importanza ≥ 35. Tetto 2 per categoria, numero massimo di letture e budget in minuti (guideline 40, meta-analisi/revisione sistematica 25, RCT 20, osservazionale 15, review 20, altro 10: stime modificabili). Mai riproporre articoli già ricevuti.
+`finale = 0.5 × rilevanza_personale + 0.5 × importanza`. Rilevanza = peso priorità (1→0.3 … 5→1) × corrispondenza della categoria; bonus +10 / malus −5 per il tipo di studio preferito. Soglie: personale ≥ 30 e importanza ≥ 35. Tetto 2 per categoria e numero di novità scelto dall'utente (da 1 a 20; l'articolo Core si aggiunge a parte). Nessuna programmazione dello studio, nessun budget di tempo. I minuti per tipo di studio (guideline 40, meta-analisi/revisione sistematica 25, RCT 20, osservazionale 15, review 20, altro 10) sono solo una stima mostrata accanto a ogni articolo. Mai riproporre articoli già ricevuti.
 
 ## Limiti noti
 Falsi negativi/positivi inevitabili (abstract strutturati diversamente, tipi inferiti). Non misura qualità reale, conflitti di interesse o applicabilità al tuo contesto. Va usato per **ordinare l'attenzione**, non per decidere pratica clinica.

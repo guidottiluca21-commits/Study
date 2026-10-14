@@ -47,8 +47,6 @@ export function Dashboard() {
           <h2 id="h-week">Questa settimana</h2>
           {latest ? (<>
             <p><span className="stat">{latest.items}</span> <span className="muted">letture selezionate</span></p>
-            <p className="muted">Tempo di studio previsto: circa <strong>{latest.minutes} minuti</strong> su {state.prefs.weekly_minutes} del tuo budget.</p>
-            <Progress value={Math.min(latest.minutes, state.prefs.weekly_minutes)} max={state.prefs.weekly_minutes} label="Tempo previsto rispetto al budget" />
           </>) : <p className="muted">Nessuna newsletter ancora ricevuta. La prima arriverà lunedì alle 06:00, se la newsletter è attiva.</p>}
         </section>
       </div>

@@ -20,6 +20,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { font-size: 106.25%; -webkit-text-size-adjust: 100%; }
 body {
+  -webkit-tap-highlight-color: transparent; overflow-wrap: break-word;
   margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6;
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -151,3 +152,25 @@ table.plain th { color: var(--muted); font-weight: 600; font-size: .8rem; text-t
 .foot a { color: var(--muted); }
 @media (min-width: 760px) { .foot { padding-bottom: 32px; } }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+
+/* ---------- ottimizzazioni per smartphone ---------- */
+button, .btn, .chip, a, label, select { touch-action: manipulation; }
+.seg span { min-width: 48px; }
+.savebar { margin-top: 8px; }
+@media (max-width: 640px) {
+  .shell { padding-inline: max(16px, env(safe-area-inset-left)) max(16px, env(safe-area-inset-right)); }
+  h1 { font-size: 1.5rem; }
+  .prio-row { flex-direction: column; align-items: stretch; gap: 6px; }
+  .prio-row .seg { display: flex; width: 100%; }
+  .prio-row .seg label { flex: 1; }
+  .prio-row .seg span { width: 100%; }
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .actions .btn { width: 100%; }
+  .savebar .btn { flex: 1 1 100%; }
+  .btn { min-height: 48px; }
+  .card { padding: 14px; }
+  .tabs button { padding-inline: 10px; }
+  .list > li { padding: 14px 0; }
+  .frame { min-height: 75vh; }
+  .grid2 { gap: 20px; }
+}

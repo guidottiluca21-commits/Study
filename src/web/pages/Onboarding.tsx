@@ -38,7 +38,7 @@ export function PriorityList({ state, topics, setTopics }: { state: UserState; t
   return (
     <ul className="list">
       {state.categories.filter((c) => topics[c.id]).map((c) => (
-        <li key={c.id} className="row between">
+        <li key={c.id} className="row between prio-row">
           <span id={`pl-${c.id}`}>{c.name_it}</span>
           <Priority name={`prio-${c.id}`} value={topics[c.id]!} label={`Priorità per ${c.name_it}`} onChange={(v) => setTopics({ ...topics, [c.id]: v })} />
         </li>
@@ -47,23 +47,25 @@ export function PriorityList({ state, topics, setTopics }: { state: UserState; t
   );
 }
 
+/** Campo numerico che permette di scrivere liberamente (anche su telefono) e corregge il valore solo quando si esce dal campo. */
+function CountInput({ p, value, min, max, onCommit }: { p: Record<string, unknown>; value: number; min: number; max: number; onCommit: (n: number) => void }) {
+  const [text, setText] = useState(String(value));
+  useEffect(() => { setText(String(value)); }, [value]);
+  const commit = () => {
+    const n = parseInt(text, 10);
+    const v = Number.isFinite(n) ? Math.max(min, Math.min(max, n)) : value;
+    setText(String(v));
+    onCommit(v);
+  };
+  return <input {...p} type="text" inputMode="numeric" pattern="[0-9]*" value={text} onChange={(e) => setText(e.target.value.replace(/[^0-9]/g, '').slice(0, 2))} onBlur={commit} onKeyDown={(e) => { if (e.key === 'Enter') commit(); }} />;
+}
+
 export function TimeFields({ prefs, setPrefs }: { prefs: Prefs; setPrefs: (p: Prefs) => void }) {
-  const num = (v: string, lo: number, hi: number, fallback: number) => { const n = parseInt(v, 10); return Number.isFinite(n) ? Math.max(lo, Math.min(hi, n)) : fallback; };
   const toggle = <T,>(arr: T[], v: T) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
   return (<>
-    <Field label="Tempo di studio a settimana (minuti)" hint="Include l'articolo fondamentale. Da 15 a 1200.">
-      {(p) => <input {...p} type="number" min={15} max={1200} step={15} value={prefs.weekly_minutes} onChange={(e) => setPrefs({ ...prefs, weekly_minutes: num(e.target.value, 15, 1200, 120) })} />}
+    <Field label="Quante novità vuoi ricevere ogni lunedì?" hint="Scrivi un numero da 1 a 20. L'articolo fondamentale (Core Knowledge) si aggiunge a questo numero. Se non ci sono abbastanza novità rilevanti, ne riceverai meno: non vengono aggiunti riempitivi.">
+      {(p) => <CountInput p={p} value={prefs.max_weekly_reads} min={1} max={20} onCommit={(n) => setPrefs({ ...prefs, max_weekly_reads: n })} />}
     </Field>
-    <Field label="Numero massimo di letture a settimana" hint="Da 1 a 21.">
-      {(p) => <input {...p} type="number" min={1} max={21} value={prefs.max_weekly_reads} onChange={(e) => setPrefs({ ...prefs, max_weekly_reads: num(e.target.value, 1, 21, 6) })} />}
-    </Field>
-    <fieldset className="field" style={{ border: 0, padding: 0 }}>
-      <legend className="label">Giorni liberi o di recupero</legend>
-      <p className="hint">Nei giorni selezionati non verranno pianificate letture.</p>
-      {DAYS.map((d, i) => (
-        <label key={d} className="check"><input type="checkbox" checked={prefs.rest_days.includes(i)} onChange={() => setPrefs({ ...prefs, rest_days: toggle(prefs.rest_days, i).sort() })} />{d}</label>
-      ))}
-    </fieldset>
     <fieldset className="field" style={{ border: 0, padding: 0 }}>
       <legend className="label">Tipologie di studio preferite</legend>
       <p className="hint">Facoltativo. Se non selezioni nulla, nessuna tipologia è favorita.</p>
@@ -132,7 +134,7 @@ export function Onboarding() {
 
   return (
     <div className="prose">
-      <PageHead eyebrow={`Passo ${step} di ${total}`} title={['Cosa ti interessa?', 'Quanto è importante ciascun argomento?', 'Quanto tempo vuoi dedicare?', 'Percorso Core Knowledge', 'Conferma e consenso', 'Anteprima della tua newsletter'][step - 1]!} />
+      <PageHead eyebrow={`Passo ${step} di ${total}`} title={['Cosa ti interessa?', 'Quanto è importante ciascun argomento?', 'Quante novità vuoi ricevere?', 'Percorso Core Knowledge', 'Conferma e consenso', 'Anteprima della tua newsletter'][step - 1]!} />
       <ol className="steps" aria-hidden="true">{Array.from({ length: total }, (_, i) => <li key={i} data-done={i < step} />)}</ol>
 
       {step === 1 && (<>

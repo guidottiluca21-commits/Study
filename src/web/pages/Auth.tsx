@@ -50,10 +50,10 @@ export function Landing({ mode }: { mode: 'signin' | 'signup' }) {
       <div>
         <p className="eyebrow">Anesthesia &amp; Critical Care</p>
         <h1>Una selezione di letteratura pensata per te, ogni lunedì alle 06:00.</h1>
-        <p className="lede">Le novità più rilevanti per i tuoi interessi, un articolo fondamentale alla settimana per costruire solide basi cliniche e un piano di lettura sostenibile. Gratuito, senza pubblicità.</p>
+        <p className="lede">Le novità più rilevanti per i tuoi interessi, un articolo fondamentale alla settimana per costruire solide basi cliniche. Gratuito, senza pubblicità.</p>
         <ul className="muted" style={{ paddingLeft: '1.1rem' }}>
           <li>Fonti verificabili: ogni articolo rimanda a PubMed.</li>
-          <li>Tu scegli argomenti, priorità e tempo di studio.</li>
+          <li>Tu scegli argomenti, priorità e quante novità ricevere.</li>
           <li>Puoi sospendere o annullare l'iscrizione in qualsiasi momento.</li>
         </ul>
       </div>
