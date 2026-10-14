@@ -154,7 +154,7 @@ for (const mobile of [false, true]) {
         await shot(page, `${mobile ? 'm' : 'd'}-app-${hash.replace(/[^a-z]/g, '') || 'home'}`);
       }
       // testo ingrandito
-      await page.addStyleTag({ content: 'html { font-size: 200% !important; }' });
+      await page.addStyleTag({ content: 'html { font-size: 200% !important; } body, button, input { font-family: DejaVu Sans, Verdana, sans-serif !important; }' });
       for (const [hash, h] of APP_PAGES.filter(([x]) => ['#/', '#/preferences', '#/library'].includes(x))) {
         await page.goto(env.url + hash);
         await page.getByRole('heading', { name: h }).first().waitFor();
