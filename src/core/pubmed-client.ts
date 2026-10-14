@@ -104,6 +104,13 @@ export class PubmedClient {
     return out;
   }
 
+  /** Ricerca libera senza filtri di data (usata per verificare il curriculum). */
+  async searchTerm(term: string, retmax = 5): Promise<string[]> {
+    const body = await this.post('esearch.fcgi', this.params({ db: 'pubmed', term, retmode: 'json', retmax: String(retmax) }));
+    const j = JSON.parse(body) as { esearchresult?: { idlist?: string[] } };
+    return j.esearchresult?.idlist ?? [];
+  }
+
   /** Risolve un titolo noto in un PMID (usato per verificare il curriculum). */
   async findByTitle(title: string): Promise<string[]> {
     const t = title.replace(/["\[\]]/g, ' ').replace(/\s+/g, ' ').trim();
