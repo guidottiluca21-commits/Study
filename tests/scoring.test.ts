@@ -114,7 +114,7 @@ describe('high-impact override', () => {
   it('un grande trial neutro può generare override con motivazione dedicata', () => {
     const neutral = mk({
       ...BIG_RCT,
-      abstract: BIG_RCT.abstract
+      abstract: BIG_RCT.abstract!
         .replace(/Mortality at 28 days was 27\.1%[^.]*\.[^.]*\./, 'Mortality at 28 days was 30.1% versus 30.9% (hazard ratio 0.97; 95% CI 0.86 to 1.09; P=0.60). There was no significant difference between groups.')
         .replace('significantly lower mortality', 'similar mortality'),
     });
