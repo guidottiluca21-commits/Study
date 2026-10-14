@@ -1,0 +1,55 @@
+name: Weekly digest
+# Due cron UTC: 03:15 e 04:15 del lunedì. Il codice decide in base all'ora REALE di Roma
+# (06:00 con ora legale/solare) quale delle due esecuzioni è valida; l'altra termina senza fare nulla.
+# L'invio è comunque idempotente (un solo invio per utente e settimana).
+on:
+  schedule:
+    - cron: '15 3 * * 1'
+    - cron: '15 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      simulate:
+        description: 'Simulazione: esegue tutto ma non invia e-mail e non salva nulla'
+        type: boolean
+        default: true
+      force:
+        description: 'Ignora il controllo dell’orario (solo per prove manuali)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: weekly-digest
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Digest settimanale
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SMTP_REPLY_TO: ${{ vars.SMTP_REPLY_TO }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          EMAIL_DAILY_LIMIT: ${{ vars.EMAIL_DAILY_LIMIT }}
+          SEND_ALLOWLIST: ${{ vars.SEND_ALLOWLIST }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            [ "${{ inputs.simulate }}" = "true" ] && ARGS="$ARGS --simulate"
+            [ "${{ inputs.force }}" = "true" ] && ARGS="$ARGS --force"
+          fi
+          npm run pipeline -- weekly $ARGS
+      # Se il job fallisce il workflow diventa rosso e GitHub invia la notifica all'amministratore
+      # (Impostazioni personali → Notifications → Actions).

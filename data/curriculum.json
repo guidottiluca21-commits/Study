@@ -1,0 +1,3883 @@
+{
+ "topics": [
+  {
+   "id": "resp-vent",
+   "category_id": "mech-vent",
+   "title_it": "Fisiologia respiratoria e ventilazione",
+   "title_en": "Respiratory physiology and ventilation",
+   "sort_order": 10,
+   "active": true
+  },
+  {
+   "id": "ards",
+   "category_id": "ards",
+   "title_it": "ARDS",
+   "title_en": "ARDS",
+   "sort_order": 20,
+   "active": true
+  },
+  {
+   "id": "shock-hemodynamics",
+   "category_id": "hemodynamics",
+   "title_it": "Shock ed emodinamica",
+   "title_en": "Shock and hemodynamics",
+   "sort_order": 30,
+   "active": true
+  },
+  {
+   "id": "sepsis",
+   "category_id": "sepsis",
+   "title_it": "Sepsi",
+   "title_en": "Sepsis",
+   "sort_order": 40,
+   "active": true
+  },
+  {
+   "id": "fluids-vasopressors",
+   "category_id": "hemodynamics",
+   "title_it": "Fluidoterapia e vasopressori",
+   "title_en": "Fluid therapy and vasopressors",
+   "sort_order": 50,
+   "active": true
+  },
+  {
+   "id": "aki-crrt",
+   "category_id": "crrt-aki",
+   "title_it": "AKI e CRRT",
+   "title_en": "AKI and CRRT",
+   "sort_order": 60,
+   "active": true
+  },
+  {
+   "id": "nutrition",
+   "category_id": "nutrition",
+   "title_it": "Nutrizione",
+   "title_en": "Nutrition",
+   "sort_order": 70,
+   "active": true
+  },
+  {
+   "id": "sedation-delirium",
+   "category_id": "sedation-delirium",
+   "title_it": "Sedazione e delirium",
+   "title_en": "Sedation and delirium",
+   "sort_order": 80,
+   "active": true
+  },
+  {
+   "id": "neurocritical",
+   "category_id": "neurocritical",
+   "title_it": "Neurointensiva",
+   "title_en": "Neurocritical care",
+   "sort_order": 90,
+   "active": true
+  },
+  {
+   "id": "icu-infections",
+   "category_id": "icu-infections",
+   "title_it": "Infezioni in ICU",
+   "title_en": "ICU infections",
+   "sort_order": 100,
+   "active": true
+  },
+  {
+   "id": "weaning-recovery",
+   "category_id": "weaning-recovery",
+   "title_it": "Svezzamento ventilatorio e recupero",
+   "title_en": "Weaning and recovery",
+   "sort_order": 110,
+   "active": true
+  },
+  {
+   "id": "anesthetic-pharmacology",
+   "category_id": "pharm-ga",
+   "title_it": "Farmacologia anestesiologica",
+   "title_en": "Anesthetic pharmacology",
+   "sort_order": 120,
+   "active": true
+  },
+  {
+   "id": "airway",
+   "category_id": "airway",
+   "title_it": "Vie aeree",
+   "title_en": "Airway",
+   "sort_order": 130,
+   "active": true
+  },
+  {
+   "id": "regional",
+   "category_id": "regional",
+   "title_it": "Anestesia locoregionale",
+   "title_en": "Regional anesthesia",
+   "sort_order": 140,
+   "active": true
+  },
+  {
+   "id": "cv-thoracic",
+   "category_id": "cardiovascular-anesthesia",
+   "title_it": "Anestesia cardiovascolare e toracica",
+   "title_en": "Cardiovascular and thoracic anesthesia",
+   "sort_order": 150,
+   "active": true
+  },
+  {
+   "id": "obstetric-pediatric",
+   "category_id": "obstetric-anesthesia",
+   "title_it": "Anestesia ostetrica e pediatrica",
+   "title_en": "Obstetric and pediatric anesthesia",
+   "sort_order": 160,
+   "active": true
+  },
+  {
+   "id": "perioperative",
+   "category_id": "perioperative",
+   "title_it": "Medicina perioperatoria",
+   "title_en": "Perioperative medicine",
+   "sort_order": 170,
+   "active": true
+  },
+  {
+   "id": "transfusion-hemostasis",
+   "category_id": "transfusion-hemostasis",
+   "title_it": "Trasfusioni ed emostasi",
+   "title_en": "Transfusion and hemostasis",
+   "sort_order": 180,
+   "active": true
+  },
+  {
+   "id": "critical-appraisal",
+   "category_id": "ebm-stats",
+   "title_it": "Interpretazione critica degli studi clinici",
+   "title_en": "Critical appraisal of clinical studies",
+   "sort_order": 190,
+   "active": true
+  }
+ ],
+ "items": [
+  {
+   "id": "rv-vili",
+   "topic_id": "resp-vent",
+   "position": 10,
+   "item_type": "review",
+   "rationale": "Revisione di riferimento sui meccanismi del danno polmonare da ventilatore (volutrauma, atelectrauma, biotrauma): base fisiopatologica della ventilazione protettiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Distinguere volutrauma, barotrauma, atelectrauma e biotrauma",
+    "Collegare i meccanismi ai parametri impostati (volume corrente, PEEP, driving pressure)"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Ventilator-induced lung injury",
+   "pmid": "24283226",
+   "doi": "10.1056/nejmra1208707",
+   "title": "Ventilator-induced lung injury",
+   "authors": [
+    "Slutsky AS",
+    "Ranieri VM"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:17.573Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rv-florali",
+   "topic_id": "resp-vent",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial randomizzato sull'ossigenoterapia ad alto flusso nell'insufficienza respiratoria ipossiemica acuta, confrontata con ossigeno standard e ventilazione non invasiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere popolazione, interventi ed esito principale",
+    "Valutare quando l'alto flusso è un'alternativa ragionevole e quali sono i limiti dei risultati"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "High-flow oxygen through nasal cannula in acute hypoxemic respiratory failure",
+   "pmid": "25981908",
+   "doi": "10.1056/nejmoa1503326",
+   "title": "High-flow oxygen through nasal cannula in acute hypoxemic respiratory failure",
+   "authors": [
+    "Frat JP",
+    "Thille AW",
+    "Mercat A"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2015,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:18.782Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rv-niv-guideline",
+   "topic_id": "resp-vent",
+   "position": 30,
+   "item_type": "guideline",
+   "rationale": "Linea guida ufficiale sull'uso della ventilazione non invasiva nell'insufficienza respiratoria acuta, con raccomandazioni per scenario clinico.",
+   "prerequisites": [],
+   "objectives": [
+    "Elencare le condizioni in cui la NIV è raccomandata",
+    "Riconoscere i segnali di fallimento della NIV"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure",
+   "pmid": "28860265",
+   "doi": "10.1183/13993003.02426-2016",
+   "title": "Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure",
+   "authors": [
+    "Rochwerg B",
+    "Brochard L",
+    "Elliott MW"
+   ],
+   "journal": "Eur Respir J",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:21.732Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-berlin",
+   "topic_id": "ards",
+   "position": 10,
+   "item_type": "guideline",
+   "rationale": "Definizione di consenso di ARDS con classificazione di gravità in base al rapporto PaO2/FiO2 con PEEP minima.",
+   "prerequisites": [],
+   "objectives": [
+    "Applicare i criteri di Berlino a un caso clinico",
+    "Riconoscere i limiti della definizione"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Acute respiratory distress syndrome: the Berlin Definition",
+   "pmid": "22797452",
+   "doi": "10.1001/jama.2012.5669",
+   "title": "Acute respiratory distress syndrome: the Berlin Definition",
+   "authors": [
+    "ARDS Definition Task Force",
+    "Ranieri VM",
+    "Rubenfeld GD"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:24.804Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-arma",
+   "topic_id": "ards",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial fondamentale che ha confrontato volumi correnti bassi e tradizionali nell'ARDS, base della ventilazione protettiva.",
+   "prerequisites": [
+    "ards-berlin"
+   ],
+   "objectives": [
+    "Spiegare la strategia di ventilazione confrontata e il peso corporeo predetto",
+    "Descrivere l'esito principale e la sua rilevanza clinica"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and the acute respiratory distress syndrome",
+   "pmid": "10793162",
+   "doi": "10.1056/nejm200005043421801",
+   "title": "Ventilation with lower tidal volumes as compared with traditional tidal volumes for acute lung injury and the acute respiratory distress syndrome",
+   "authors": [
+    "Acute Respiratory Distress Syndrome Network",
+    "Brower RG",
+    "Matthay MA"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2000,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:25.909Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-alveoli",
+   "topic_id": "ards",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial che ha confrontato livelli alti e bassi di PEEP in pazienti con ARDS ventilati con volumi correnti bassi.",
+   "prerequisites": [
+    "ards-arma"
+   ],
+   "objectives": [
+    "Descrivere come è stata impostata la PEEP nei due bracci",
+    "Discutere cosa non permette di concludere sulla PEEP individualizzata"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Higher versus lower positive end-expiratory pressures in patients with the acute respiratory distress syndrome",
+   "pmid": "15269312",
+   "doi": "10.1056/nejmoa032193",
+   "title": "Higher versus lower positive end-expiratory pressures in patients with the acute respiratory distress syndrome",
+   "authors": [
+    "Brower RG",
+    "Lanken PN",
+    "MacIntyre N"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2004,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:26.894Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-driving",
+   "topic_id": "ards",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Analisi di dati di trial randomizzati che associa la driving pressure alla sopravvivenza nell'ARDS; spunto per ventilazione guidata dalla meccanica respiratoria.",
+   "prerequisites": [
+    "ards-arma"
+   ],
+   "objectives": [
+    "Definire la driving pressure e come si calcola",
+    "Distinguere associazione da effetto causale in un'analisi post hoc"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Driving pressure and survival in the acute respiratory distress syndrome",
+   "pmid": "25693014",
+   "doi": "10.1056/nejmsa1410639",
+   "title": "Driving pressure and survival in the acute respiratory distress syndrome",
+   "authors": [
+    "Amato MB",
+    "Meade MO",
+    "Slutsky AS"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2015,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:27.944Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-acurasys",
+   "topic_id": "ards",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'uso precoce di cisatracurio per 48 ore nell'ARDS grave.",
+   "prerequisites": [
+    "ards-arma"
+   ],
+   "objectives": [
+    "Riassumere popolazione, intervento ed esito",
+    "Valutare l'applicabilità rispetto ai trial successivi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Neuromuscular blockers in early acute respiratory distress syndrome",
+   "pmid": "20843245",
+   "doi": "10.1056/nejmoa1005372",
+   "title": "Neuromuscular blockers in early acute respiratory distress syndrome",
+   "authors": [
+    "Papazian L",
+    "Forel JM",
+    "Gacouin A"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2010,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:28.879Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-rose",
+   "topic_id": "ards",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Trial pragmatico sul blocco neuromuscolare precoce in un contesto di sedazione leggera, da leggere insieme a ACURASYS.",
+   "prerequisites": [
+    "ards-acurasys"
+   ],
+   "objectives": [
+    "Confrontare disegno e contesto con ACURASYS",
+    "Spiegare perché trial simili possano portare a conclusioni diverse"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Early neuromuscular blockade in the acute respiratory distress syndrome",
+   "pmid": "31112383",
+   "doi": "10.1056/nejmoa1901686",
+   "title": "Early Neuromuscular Blockade in the Acute Respiratory Distress Syndrome",
+   "authors": [
+    "National Heart, Lung, and Blood Institute PETAL Clinical Trials Network",
+    "Moss M",
+    "Huang DT"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:29.893Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-proseva",
+   "topic_id": "ards",
+   "position": 70,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla posizione prona prolungata nell'ARDS grave.",
+   "prerequisites": [
+    "ards-arma"
+   ],
+   "objectives": [
+    "Indicare i criteri di inclusione e la durata della posizione prona",
+    "Valutare l'esito principale e la sua robustezza"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Prone positioning in severe acute respiratory distress syndrome",
+   "pmid": "23688302",
+   "doi": "10.1056/nejmoa1214103",
+   "title": "Prone positioning in severe acute respiratory distress syndrome",
+   "authors": [
+    "Gu&#xe9;rin C",
+    "Reignier J",
+    "Richard JC"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:31.014Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-eolia",
+   "topic_id": "ards",
+   "position": 80,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'ECMO precoce nell'ARDS grave rispetto a strategia convenzionale con possibilità di rescue.",
+   "prerequisites": [
+    "ards-proseva"
+   ],
+   "objectives": [
+    "Descrivere la strategia di cross-over e il suo impatto sull'interpretazione",
+    "Discutere il ruolo dell'ECMO nell'ARDS grave"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Extracorporeal membrane oxygenation for severe acute respiratory distress syndrome",
+   "pmid": "30157406",
+   "doi": "10.1056/nejmclde1804601",
+   "title": "Extracorporeal Membrane Oxygenation for Severe Acute Respiratory Distress Syndrome",
+   "authors": [
+    "Mi MY",
+    "Matthay MA",
+    "Morris AH"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:34.021Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-guideline",
+   "topic_id": "ards",
+   "position": 90,
+   "item_type": "guideline",
+   "rationale": "Linea guida ufficiale sulla ventilazione nell'ARDS dell'adulto: sintetizza le evidenze su volumi correnti, PEEP, posizione prona e altre strategie.",
+   "prerequisites": [
+    "ards-arma"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su ventilazione protettiva e posizione prona",
+    "Distinguere raccomandazioni forti e condizionate"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with Acute Respiratory Distress Syndrome",
+   "pmid": "28459336",
+   "doi": "10.1164/rccm.201703-0548st",
+   "title": "An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with Acute Respiratory Distress Syndrome",
+   "authors": [
+    "Fan E",
+    "Del Sorbo L",
+    "Goligher EC"
+   ],
+   "journal": "Am J Respir Crit Care Med",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:35.224Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ards-lungsafe",
+   "topic_id": "ards",
+   "position": 100,
+   "item_type": "landmark_trial",
+   "rationale": "Studio osservazionale internazionale su riconoscimento, trattamento ed esiti dell'ARDS nella pratica reale.",
+   "prerequisites": [
+    "ards-berlin"
+   ],
+   "objectives": [
+    "Descrivere il divario tra evidenze e pratica emerso dallo studio",
+    "Riconoscere i limiti di uno studio osservazionale"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Epidemiology, patterns of care, and mortality for patients with acute respiratory distress syndrome in intensive care units in 50 countries",
+   "pmid": "26903337",
+   "doi": "10.1001/jama.2016.0291",
+   "title": "Epidemiology, Patterns of Care, and Mortality for Patients With Acute Respiratory Distress Syndrome in Intensive Care Units in 50 Countries",
+   "authors": [
+    "Bellani G",
+    "Laffey JG",
+    "Pham T"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:36.050Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sh-circulatory",
+   "topic_id": "shock-hemodynamics",
+   "position": 10,
+   "item_type": "review",
+   "rationale": "Revisione sui meccanismi, la classificazione e il riconoscimento dello shock circolatorio.",
+   "prerequisites": [],
+   "objectives": [
+    "Classificare i tipi di shock",
+    "Collegare ogni tipo a profilo emodinamico e priorità terapeutiche"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Circulatory shock",
+   "pmid": "24171518",
+   "doi": "10.1056/nejmra1208943",
+   "title": "Circulatory shock",
+   "authors": [
+    "Vincent JL",
+    "De Backer D"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:37.109Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sh-iabp",
+   "topic_id": "shock-hemodynamics",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul contropulsatore aortico nello shock cardiogeno da infarto con rivascolarizzazione precoce.",
+   "prerequisites": [
+    "sh-circulatory"
+   ],
+   "objectives": [
+    "Descrivere popolazione ed esito principale",
+    "Discutere cosa implica per il supporto meccanico nello shock cardiogeno"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Intraaortic balloon support for myocardial infarction with cardiogenic shock",
+   "pmid": "22920912",
+   "doi": "10.1056/nejmoa1208410",
+   "title": "Intraaortic balloon support for myocardial infarction with cardiogenic shock",
+   "authors": [
+    "Thiele H",
+    "Zeymer U",
+    "Neumann FJ"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:40.349Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sh-eclsshock",
+   "topic_id": "shock-hemodynamics",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul supporto extracorporeo precoce nello shock cardiogeno da infarto.",
+   "prerequisites": [
+    "sh-iabp"
+   ],
+   "objectives": [
+    "Descrivere disegno ed esito principale",
+    "Confrontare i risultati con le evidenze sul contropulsatore aortico"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Extracorporeal Life Support in Infarct-Related Cardiogenic Shock",
+   "pmid": "37634145",
+   "doi": "10.1056/nejmoa2307227",
+   "title": "Extracorporeal Life Support in Infarct-Related Cardiogenic Shock",
+   "authors": [
+    "Thiele H",
+    "Zeymer U",
+    "Akin I"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2023,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:41.179Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-safe",
+   "topic_id": "fluids-vasopressors",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial che confronta albumina e soluzione salina per la rianimazione volemica in terapia intensiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere popolazione e confronto",
+    "Discutere i risultati per sottogruppi e i limiti"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "A comparison of albumin and saline for fluid resuscitation in the intensive care unit",
+   "pmid": "15163774",
+   "doi": "10.1056/nejmoa040232",
+   "title": "A comparison of albumin and saline for fluid resuscitation in the intensive care unit",
+   "authors": [
+    "Finfer S",
+    "Bellomo R",
+    "Boyce N"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2004,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:42.227Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-chest",
+   "topic_id": "fluids-vasopressors",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sugli amidi idrossietilici rispetto alla soluzione salina in terapia intensiva.",
+   "prerequisites": [
+    "fv-safe"
+   ],
+   "objectives": [
+    "Riassumere gli esiti di sicurezza renale",
+    "Spiegare perché la scelta del colloide ha implicazioni di sicurezza"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Hydroxyethyl starch or saline for fluid resuscitation in intensive care",
+   "pmid": "23075127",
+   "doi": "10.1056/nejmoa1209759",
+   "title": "Hydroxyethyl starch or saline for fluid resuscitation in intensive care",
+   "authors": [
+    "Myburgh JA",
+    "Finfer S",
+    "Bellomo R"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:43.237Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-6s",
+   "topic_id": "fluids-vasopressors",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'uso di amido idrossietilico rispetto a Ringer acetato nella sepsi grave.",
+   "prerequisites": [
+    "fv-chest"
+   ],
+   "objectives": [
+    "Descrivere esito principale e eventi avversi",
+    "Collegare il risultato alle raccomandazioni sull'uso degli amidi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Hydroxyethyl starch 130/0.42 versus Ringer's acetate in severe sepsis",
+   "pmid": "22738085",
+   "doi": "10.1056/nejmoa1204242",
+   "title": "Hydroxyethyl starch 130/0.42 versus Ringer's acetate in severe sepsis",
+   "authors": [
+    "Perner A",
+    "Haase N",
+    "Guttormsen AB"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:48.445Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-smart",
+   "topic_id": "fluids-vasopressors",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial pragmatico a gruppi sulla scelta tra cristalloidi bilanciati e soluzione salina in terapia intensiva.",
+   "prerequisites": [
+    "fv-safe"
+   ],
+   "objectives": [
+    "Descrivere l'esito composito renale",
+    "Valutare l'applicabilità e i limiti di un disegno pragmatico a cluster"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Balanced crystalloids versus saline in critically ill adults",
+   "pmid": "29485925",
+   "doi": "10.1056/nejmoa1711584",
+   "title": "Balanced Crystalloids versus Saline in Critically Ill Adults",
+   "authors": [
+    "Semler MW",
+    "Self WH",
+    "Wanderer JP"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:49.554Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-clovers",
+   "topic_id": "fluids-vasopressors",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla strategia restrittiva (vasopressori precoci) rispetto a quella liberale di fluidi nell'ipotensione da sepsi.",
+   "prerequisites": [
+    "fv-smart"
+   ],
+   "objectives": [
+    "Confrontare le due strategie",
+    "Discutere le implicazioni per la gestione iniziale della sepsi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Early restrictive or liberal fluid management for sepsis-induced hypotension",
+   "pmid": "36688507",
+   "doi": "10.1056/nejmoa2212663",
+   "title": "Early Restrictive or Liberal Fluid Management for Sepsis-Induced Hypotension",
+   "authors": [
+    "National Heart, Lung, and Blood Institute Prevention and Early Treatment of Acute Lung Injury Clinical Trials Network",
+    "Shapiro NI",
+    "Douglas IS"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2023,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:53.471Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-soap2",
+   "topic_id": "fluids-vasopressors",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Trial che confronta dopamina e noradrenalina come vasopressore di prima linea nello shock.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere esito principale e eventi avversi",
+    "Spiegare il ruolo della noradrenalina come prima scelta"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Comparison of dopamine and norepinephrine in the treatment of shock",
+   "pmid": "20200382",
+   "doi": "10.1056/nejmoa0907118",
+   "title": "Comparison of dopamine and norepinephrine in the treatment of shock",
+   "authors": [
+    "De Backer D",
+    "Biston P",
+    "Devriendt J"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2010,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:00:55.638Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-vasst",
+   "topic_id": "fluids-vasopressors",
+   "position": 70,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'aggiunta di vasopressina alla noradrenalina nello shock settico.",
+   "prerequisites": [
+    "fv-soap2"
+   ],
+   "objectives": [
+    "Descrivere il disegno in doppio cieco",
+    "Discutere i sottogruppi per gravità"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Vasopressin versus norepinephrine infusion in patients with septic shock",
+   "pmid": "18305265",
+   "doi": "10.1056/nejmoa067373",
+   "title": "Vasopressin versus norepinephrine infusion in patients with septic shock",
+   "authors": [
+    "Russell JA",
+    "Walley KR",
+    "Singer J"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:00.827Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-athos3",
+   "topic_id": "fluids-vasopressors",
+   "position": 80,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'angiotensina II nello shock vasodilatatorio refrattario.",
+   "prerequisites": [
+    "fv-soap2"
+   ],
+   "objectives": [
+    "Indicare l'esito principale sulla pressione arteriosa",
+    "Discutere il ruolo di un vasopressore non catecolaminergico"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Angiotensin II for the treatment of vasodilatory shock",
+   "pmid": "28528561",
+   "doi": "10.1056/nejmoa1704154",
+   "title": "Angiotensin II for the Treatment of Vasodilatory Shock",
+   "authors": [
+    "Khanna A",
+    "English SW",
+    "Wang XS"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:03.794Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "fv-sepsispam",
+   "topic_id": "fluids-vasopressors",
+   "position": 90,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul target pressorio alto o basso nello shock settico.",
+   "prerequisites": [
+    "fv-soap2"
+   ],
+   "objectives": [
+    "Descrivere i due target di pressione",
+    "Valutare gli eventi avversi e i sottogruppi (ipertensione cronica)"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "High versus low blood-pressure target in patients with septic shock",
+   "pmid": "24635770",
+   "doi": "10.1056/nejmoa1312173",
+   "title": "High versus low blood-pressure target in patients with septic shock",
+   "authors": [
+    "Asfar P",
+    "Meziani F",
+    "Hamel JF"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2014,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:06.866Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-sepsis3",
+   "topic_id": "sepsis",
+   "position": 10,
+   "item_type": "guideline",
+   "rationale": "Definizioni di consenso di sepsi e shock settico basate sulla disfunzione d'organo.",
+   "prerequisites": [],
+   "objectives": [
+    "Applicare i criteri SOFA/qSOFA e la definizione di shock settico",
+    "Riconoscere i limiti delle definizioni"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+   "pmid": "26903338",
+   "doi": "10.1001/jama.2016.0287",
+   "title": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+   "authors": [
+    "Singer M",
+    "Deutschman CS",
+    "Seymour CW"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:08.006Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-ssc2021",
+   "topic_id": "sepsis",
+   "position": 20,
+   "item_type": "guideline",
+   "rationale": "Linea guida internazionale aggiornata sulla gestione della sepsi e dello shock settico.",
+   "prerequisites": [
+    "sp-sepsis3"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su antibiotici, fluidi, vasopressori e steroidi",
+    "Distinguere raccomandazioni forti e deboli e la qualità delle evidenze"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+   "pmid": "34605781",
+   "doi": "10.1097/ccm.0000000000005337",
+   "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+   "authors": [
+    "Evans L",
+    "Rhodes A",
+    "Alhazzani W"
+   ],
+   "journal": "Crit Care Med",
+   "pub_year": 2021,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:08.978Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-egdt",
+   "topic_id": "sepsis",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial storico sulla rianimazione precoce guidata da obiettivi nello shock settico, punto di partenza dei trial successivi.",
+   "prerequisites": [
+    "sp-sepsis3"
+   ],
+   "objectives": [
+    "Descrivere il protocollo e gli obiettivi emodinamici",
+    "Spiegare perché i trial successivi lo hanno riesaminato"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Early goal-directed therapy in the treatment of severe sepsis and septic shock",
+   "pmid": "11794169",
+   "doi": "10.1056/nejmoa010307",
+   "title": "Early goal-directed therapy in the treatment of severe sepsis and septic shock",
+   "authors": [
+    "Rivers E",
+    "Nguyen B",
+    "Havstad S"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2001,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:10.177Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-process",
+   "topic_id": "sepsis",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial multicentrico che confronta cure protocollizzate e cure usuali nello shock settico precoce.",
+   "prerequisites": [
+    "sp-egdt"
+   ],
+   "objectives": [
+    "Confrontare i bracci protocollizzati e usuali",
+    "Riassumere la conclusione sulla rianimazione guidata da protocollo"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "A randomized trial of protocol-based care for early septic shock",
+   "pmid": "24635773",
+   "doi": "10.1056/nejmoa1401602",
+   "title": "A randomized trial of protocol-based care for early septic shock",
+   "authors": [
+    "ProCESS Investigators",
+    "Yealy DM",
+    "Kellum JA"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2014,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:11.094Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-adrenal",
+   "topic_id": "sepsis",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'idrocortisone in infusione continua nello shock settico in ventilazione meccanica.",
+   "prerequisites": [
+    "sp-ssc2021"
+   ],
+   "objectives": [
+    "Descrivere esito principale e esiti secondari",
+    "Confrontare con i risultati di APROCCHSS"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Adjunctive glucocorticoid therapy in patients with septic shock",
+   "pmid": "29347874",
+   "doi": "10.1056/nejmoa1705835",
+   "title": "Adjunctive Glucocorticoid Therapy in Patients with Septic Shock",
+   "authors": [
+    "Venkatesh B",
+    "Finfer S",
+    "Cohen J"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:14.132Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-aprocchss",
+   "topic_id": "sepsis",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'associazione di idrocortisone e fludrocortisone nello shock settico.",
+   "prerequisites": [
+    "sp-ssc2021"
+   ],
+   "objectives": [
+    "Descrivere l'intervento e l'esito principale",
+    "Spiegare perché i risultati dei due trial sugli steroidi possano differire"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Hydrocortisone plus fludrocortisone for adults with septic shock",
+   "pmid": "29490185",
+   "doi": "10.1056/nejmoa1705716",
+   "title": "Hydrocortisone plus Fludrocortisone for Adults with Septic Shock",
+   "authors": [
+    "Annane D",
+    "Renault A",
+    "Brun-Buisson C"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:15.181Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-seymour",
+   "topic_id": "sepsis",
+   "position": 70,
+   "item_type": "landmark_trial",
+   "rationale": "Studio osservazionale sul tempo di completamento dei pacchetti di cure per la sepsi e la mortalità.",
+   "prerequisites": [
+    "sp-ssc2021"
+   ],
+   "objectives": [
+    "Descrivere la relazione osservata tra tempi e mortalità",
+    "Riconoscere i limiti di una associazione osservazionale"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Time to treatment and mortality during mandated emergency care for sepsis",
+   "pmid": "28528569",
+   "doi": "10.1056/nejmoa1703058",
+   "title": "Time to Treatment and Mortality during Mandated Emergency Care for Sepsis",
+   "authors": [
+    "Seymour CW",
+    "Gesten F",
+    "Prescott HC"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:20.361Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sp-lovit",
+   "topic_id": "sepsis",
+   "position": 80,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla vitamina C endovenosa in pazienti con sepsi in terapia intensiva.",
+   "prerequisites": [
+    "sp-ssc2021"
+   ],
+   "objectives": [
+    "Descrivere l'esito composito",
+    "Valutare il rapporto tra plausibilità biologica ed evidenze cliniche"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Intravenous vitamin C in adults with sepsis in the intensive care unit",
+   "pmid": "35704292",
+   "doi": "10.1056/nejmoa2200644",
+   "title": "Intravenous Vitamin C in Adults with Sepsis in the Intensive Care Unit",
+   "authors": [
+    "Lamontagne F",
+    "Masse MH",
+    "Menard J"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2022,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:21.260Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ak-atn",
+   "topic_id": "aki-crrt",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'intensità del supporto renale sostitutivo nell'AKI grave.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere le strategie confrontate",
+    "Discutere l'esito principale"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Intensity of renal support in critically ill patients with acute kidney injury",
+   "pmid": "18492867",
+   "doi": "10.1056/nejmoa0802639",
+   "title": "Intensity of renal support in critically ill patients with acute kidney injury",
+   "authors": [
+    "VA/NIH Acute Renal Failure Trial Network",
+    "Palevsky PM",
+    "Zhang JH"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:24.477Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ak-renal",
+   "topic_id": "aki-crrt",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla dose di CRRT in pazienti critici con AKI.",
+   "prerequisites": [
+    "ak-atn"
+   ],
+   "objectives": [
+    "Descrivere le dosi confrontate",
+    "Collegare i risultati alle raccomandazioni sulla dose"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Intensity of continuous renal-replacement therapy in critically ill patients",
+   "pmid": "19846848",
+   "doi": "10.1056/nejmoa0902413",
+   "title": "Intensity of continuous renal-replacement therapy in critically ill patients",
+   "authors": [
+    "RENAL Replacement Therapy Study Investigators",
+    "Bellomo R",
+    "Cass A"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2009,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:25.355Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ak-akiki",
+   "topic_id": "aki-crrt",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul momento di inizio della terapia sostitutiva renale: strategia precoce o ritardata.",
+   "prerequisites": [
+    "ak-atn"
+   ],
+   "objectives": [
+    "Spiegare le due strategie e i criteri di inizio nel braccio ritardato",
+    "Valutare gli esiti e l'impatto pratico"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Initiation strategies for renal-replacement therapy in the intensive care unit",
+   "pmid": "27181456",
+   "doi": "10.1056/nejmoa1603017",
+   "title": "Initiation Strategies for Renal-Replacement Therapy in the Intensive Care Unit",
+   "authors": [
+    "Gaudry S",
+    "Hajage D",
+    "Schortgen F"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:28.452Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ak-starrt",
+   "topic_id": "aki-crrt",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial multinazionale su strategia accelerata o standard di inizio della terapia sostitutiva renale.",
+   "prerequisites": [
+    "ak-akiki"
+   ],
+   "objectives": [
+    "Descrivere le strategie e l'esito di mortalità",
+    "Discutere l'esito sulla dipendenza dalla dialisi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Timing of initiation of renal-replacement therapy in acute kidney injury",
+   "pmid": "32668114",
+   "doi": "10.1056/nejmoa2000741",
+   "title": "Timing of Initiation of Renal-Replacement Therapy in Acute Kidney Injury",
+   "authors": [
+    "STARRT-AKI Investigators",
+    "Canadian Critical Care Trials Group",
+    "Australian and New Zealand Intensive Care Society Clinical Trials Group"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2020,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:29.554Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ak-elain",
+   "topic_id": "aki-crrt",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial monocentrico sull'inizio precoce o ritardato della terapia sostitutiva renale.",
+   "prerequisites": [
+    "ak-akiki"
+   ],
+   "objectives": [
+    "Descrivere i criteri di randomizzazione",
+    "Confrontare con AKIKI e STARRT-AKI e discutere le differenze di disegno"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effect of early vs delayed initiation of renal replacement therapy on mortality in critically ill patients with acute kidney injury: the ELAIN randomized clinical trial",
+   "pmid": "27209269",
+   "doi": "10.1001/jama.2016.5828",
+   "title": "Effect of Early vs Delayed Initiation of Renal Replacement Therapy on Mortality in Critically Ill Patients With Acute Kidney Injury: The ELAIN Randomized Clinical Trial",
+   "authors": [
+    "Zarbock A",
+    "Kellum JA",
+    "Schmidt C"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:30.588Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nu-epanic",
+   "topic_id": "nutrition",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul momento di inizio della nutrizione parenterale integrativa in terapia intensiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere i due bracci",
+    "Discutere gli esiti su durata di degenza e infezioni"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Early versus late parenteral nutrition in critically ill adults",
+   "pmid": "21714640",
+   "doi": "10.1056/nejmoa1102662",
+   "title": "Early versus late parenteral nutrition in critically ill adults",
+   "authors": [
+    "Casaer MP",
+    "Mesotten D",
+    "Hermans G"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2011,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:34.039Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nu-calories",
+   "topic_id": "nutrition",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla via di somministrazione (enterale o parenterale) della nutrizione precoce nel paziente critico.",
+   "prerequisites": [
+    "nu-epanic"
+   ],
+   "objectives": [
+    "Confrontare le due vie",
+    "Discutere gli eventi avversi osservati"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Trial of the route of early nutritional support in critically ill adults",
+   "pmid": "25271389",
+   "doi": "10.1056/nejmoa1409860",
+   "title": "Trial of the route of early nutritional support in critically ill adults",
+   "authors": [
+    "Harvey SE",
+    "Parrott F",
+    "Harrison DA"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2014,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:34.988Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nu-eden",
+   "topic_id": "nutrition",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla nutrizione enterale trofica o completa nei pazienti con danno polmonare acuto.",
+   "prerequisites": [
+    "nu-calories"
+   ],
+   "objectives": [
+    "Descrivere l'esito principale",
+    "Discutere l'implicazione per l'obiettivo calorico iniziale"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Initial trophic vs full enteral feeding in patients with acute lung injury: the EDEN randomized trial",
+   "pmid": "22307571",
+   "doi": "10.1001/jama.2012.137",
+   "title": "Initial trophic vs full enteral feeding in patients with acute lung injury: the EDEN randomized trial",
+   "authors": [
+    "National Heart, Lung, and Blood Institute Acute Respiratory Distress Syndrome (ARDS) Clinical Trials Network",
+    "Rice TW",
+    "Wheeler AP"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:36.020Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nu-nutrirea2",
+   "topic_id": "nutrition",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla nutrizione enterale o parenterale precoce nei pazienti in ventilazione meccanica con shock.",
+   "prerequisites": [
+    "nu-calories"
+   ],
+   "objectives": [
+    "Descrivere complicazioni gastrointestinali ed esiti",
+    "Discutere la sicurezza della nutrizione enterale in shock"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Enteral versus parenteral early nutrition in ventilated adults with shock: a randomised, controlled, multicentre, open-label, parallel-group study (NUTRIREA-2)",
+   "pmid": "29128300",
+   "doi": "10.1016/s0140-6736(17)32146-3",
+   "title": "Enteral versus parenteral early nutrition in ventilated adults with shock: a randomised, controlled, multicentre, open-label, parallel-group study (NUTRIREA-2)",
+   "authors": [
+    "Reignier J",
+    "Boisram&#xe9;-Helms J",
+    "Brisard L"
+   ],
+   "journal": "Lancet",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:37.101Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nu-espen",
+   "topic_id": "nutrition",
+   "position": 50,
+   "item_type": "guideline",
+   "rationale": "Linea guida europea sulla nutrizione clinica nel paziente critico.",
+   "prerequisites": [
+    "nu-calories"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su tempi, vie e quantità",
+    "Applicarle a un caso clinico"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "ESPEN guideline on clinical nutrition in the intensive care unit",
+   "pmid": "30348463",
+   "doi": "10.1016/j.clnu.2018.08.037",
+   "title": "ESPEN guideline on clinical nutrition in the intensive care unit",
+   "authors": [
+    "Singer P",
+    "Blaser AR",
+    "Berger MM"
+   ],
+   "journal": "Clin Nutr",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:38.046Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nu-sccm",
+   "topic_id": "nutrition",
+   "position": 60,
+   "item_type": "guideline",
+   "rationale": "Linea guida nordamericana sulla nutrizione del paziente critico adulto, da confrontare con ESPEN.",
+   "prerequisites": [
+    "nu-calories"
+   ],
+   "objectives": [
+    "Confrontare le raccomandazioni con ESPEN",
+    "Riconoscere dove le evidenze sono limitate"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Guidelines for the provision and assessment of nutrition support therapy in the adult critically ill patient: Society of Critical Care Medicine (SCCM) and American Society for Parenteral and Enteral Nutrition (A.S.P.E.N.)",
+   "pmid": "26773077",
+   "doi": "10.1177/0148607115621863",
+   "title": "Guidelines for the Provision and Assessment of Nutrition Support Therapy in the Adult Critically Ill Patient: Society of Critical Care Medicine (SCCM) and American Society for Parenteral and Enteral Nutrition (A.S.P.E.N.)",
+   "authors": [
+    "McClave SA",
+    "Taylor BE",
+    "Martindale RG"
+   ],
+   "journal": "JPEN J Parenter Enteral Nutr",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:39.277Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sd-padis",
+   "topic_id": "sedation-delirium",
+   "position": 10,
+   "item_type": "guideline",
+   "rationale": "Linea guida (PADIS) su dolore, agitazione/sedazione, delirium, immobilità e sonno in terapia intensiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere le raccomandazioni su sedazione leggera e analgesia",
+    "Collegare le raccomandazioni alla prevenzione del delirium"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Clinical practice guidelines for the prevention and management of pain, agitation/sedation, delirium, immobility, and sleep disruption in adult patients in the ICU",
+   "pmid": "30113379",
+   "doi": "10.1097/ccm.0000000000003299",
+   "title": "Clinical Practice Guidelines for the Prevention and Management of Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption in Adult Patients in the ICU",
+   "authors": [
+    "Devlin JW",
+    "Skrobik Y",
+    "G&#xe9;linas C"
+   ],
+   "journal": "Crit Care Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:40.109Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sd-kress",
+   "topic_id": "sedation-delirium",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'interruzione quotidiana della sedazione in pazienti ventilati.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere la strategia di interruzione",
+    "Discutere gli esiti su durata di ventilazione e degenza"
+   ],
+   "reading_minutes": 20,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Daily interruption of sedative infusions in critically ill patients undergoing mechanical ventilation",
+   "pmid": "10816184",
+   "doi": "10.1056/nejm200005183422002",
+   "title": "Daily interruption of sedative infusions in critically ill patients undergoing mechanical ventilation",
+   "authors": [
+    "Kress JP",
+    "Pohlman AS",
+    "O'Connor MF"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2000,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:43.197Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sd-abc",
+   "topic_id": "sedation-delirium",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'associazione di risveglio quotidiano e prova di respiro spontaneo.",
+   "prerequisites": [
+    "sd-kress"
+   ],
+   "objectives": [
+    "Descrivere il protocollo combinato",
+    "Discutere gli esiti a lungo termine"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Efficacy and safety of a paired sedation and ventilator weaning protocol for mechanically ventilated patients in intensive care (Awakening and Breathing Controlled trial): a randomised controlled trial",
+   "pmid": "18191684",
+   "doi": "10.1016/s0140-6736(08)60105-1",
+   "title": "Efficacy and safety of a paired sedation and ventilator weaning protocol for mechanically ventilated patients in intensive care (Awakening and Breathing Controlled trial): a randomised controlled trial",
+   "authors": [
+    "Girard TD",
+    "Kress JP",
+    "Fuchs BD"
+   ],
+   "journal": "Lancet",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:46.275Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sd-spice3",
+   "topic_id": "sedation-delirium",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla dexmedetomidina come sedazione precoce rispetto alle cure usuali nei pazienti ventilati.",
+   "prerequisites": [
+    "sd-padis"
+   ],
+   "objectives": [
+    "Descrivere confronto ed esito principale",
+    "Discutere gli eventi avversi emodinamici"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Early sedation with dexmedetomidine in critically ill patients",
+   "pmid": "31112380",
+   "doi": "10.1056/nejmoa1904710",
+   "title": "Early Sedation with Dexmedetomidine in Critically Ill Patients",
+   "authors": [
+    "Shehabi Y",
+    "Howe BD",
+    "Bellomo R"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:49.341Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sd-mindusa",
+   "topic_id": "sedation-delirium",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sugli antipsicotici nel trattamento del delirium in terapia intensiva.",
+   "prerequisites": [
+    "sd-padis"
+   ],
+   "objectives": [
+    "Descrivere esito principale e sicurezza",
+    "Discutere il ruolo (limitato) degli antipsicotici"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Haloperidol and ziprasidone for treatment of delirium in critical illness",
+   "pmid": "30346242",
+   "doi": "10.1056/nejmoa1808217",
+   "title": "Haloperidol and Ziprasidone for Treatment of Delirium in Critical Illness",
+   "authors": [
+    "Girard TD",
+    "Exline MC",
+    "Carson SS"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:50.511Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "sd-ely",
+   "topic_id": "sedation-delirium",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Studio di coorte sul delirium come fattore associato alla mortalità nel paziente ventilato.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere l'associazione tra delirium e mortalità",
+    "Riconoscere i limiti dell'inferenza osservazionale"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Delirium as a predictor of mortality in mechanically ventilated patients in the intensive care unit",
+   "pmid": "15082703",
+   "doi": "10.1001/jama.291.14.1753",
+   "title": "Delirium as a predictor of mortality in mechanically ventilated patients in the intensive care unit",
+   "authors": [
+    "Ely EW",
+    "Shintani A",
+    "Truman B"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2004,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:53.592Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nc-ttm1",
+   "topic_id": "neurocritical",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul controllo della temperatura dopo arresto cardiaco extraospedaliero.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere i due target di temperatura",
+    "Discutere l'esito principale"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Targeted temperature management at 33°C versus 36°C after cardiac arrest",
+   "pmid": "24237006",
+   "doi": "10.1056/nejmoa1310519",
+   "title": "Targeted temperature management at 33&#xb0;C versus 36&#xb0;C after cardiac arrest",
+   "authors": [
+    "Nielsen N",
+    "Wetterslev J",
+    "Cronberg T"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:54.463Z",
+   "match_score": 0.9,
+   "verification_note": null
+  },
+  {
+   "id": "nc-ttm2",
+   "topic_id": "neurocritical",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'ipotermia rispetto alla normotermia (con controllo della febbre) dopo arresto cardiaco.",
+   "prerequisites": [
+    "nc-ttm1"
+   ],
+   "objectives": [
+    "Confrontare disegno e risultati con TTM1",
+    "Discutere le implicazioni pratiche sul controllo della temperatura"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Hypothermia versus normothermia after out-of-hospital cardiac arrest",
+   "pmid": "34133859",
+   "doi": "10.1056/nejmoa2100591",
+   "title": "Hypothermia versus Normothermia after Out-of-Hospital Cardiac Arrest",
+   "authors": [
+    "Dankiewicz J",
+    "Cronberg T",
+    "Lilja G"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2021,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:55.687Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nc-besttrip",
+   "topic_id": "neurocritical",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla gestione guidata dal monitoraggio della pressione intracranica nel trauma cranico grave.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere le strategie confrontate",
+    "Discutere cosa il trial permette e non permette di concludere"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "A trial of intracranial-pressure monitoring in traumatic brain injury",
+   "pmid": "23234472",
+   "doi": "10.1056/nejmoa1207363",
+   "title": "A trial of intracranial-pressure monitoring in traumatic brain injury",
+   "authors": [
+    "Chesnut RM",
+    "Temkin N",
+    "Carney N"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:01:59.021Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nc-rescueicp",
+   "topic_id": "neurocritical",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla craniectomia decompressiva nell'ipertensione endocranica traumatica refrattaria.",
+   "prerequisites": [
+    "nc-besttrip"
+   ],
+   "objectives": [
+    "Descrivere gli esiti funzionali e di mortalità",
+    "Discutere l'impatto sulle decisioni condivise con i familiari"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Trial of decompressive craniectomy for traumatic intracranial hypertension",
+   "pmid": "27602507",
+   "doi": "10.1056/nejmoa1605215",
+   "title": "Trial of Decompressive Craniectomy for Traumatic Intracranial Hypertension",
+   "authors": [
+    "Hutchinson PJ",
+    "Kolias AG",
+    "Timofeev IS"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:02.086Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nc-btf4",
+   "topic_id": "neurocritical",
+   "position": 50,
+   "item_type": "guideline",
+   "rationale": "Linee guida sulla gestione del trauma cranico grave.",
+   "prerequisites": [
+    "nc-besttrip"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su monitoraggio e soglie",
+    "Riconoscere il livello di evidenza"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Guidelines for the management of severe traumatic brain injury, fourth edition",
+   "pmid": "27654000",
+   "doi": "10.1227/neu.0000000000001432",
+   "title": "Guidelines for the Management of Severe Traumatic Brain Injury, Fourth Edition",
+   "authors": [
+    "Carney N",
+    "Totten AM",
+    "O'Reilly C"
+   ],
+   "journal": "Neurosurgery",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:03.049Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "nc-crash3",
+   "topic_id": "neurocritical",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'acido tranexamico nel trauma cranico acuto.",
+   "prerequisites": [
+    "nc-btf4"
+   ],
+   "objectives": [
+    "Descrivere gli esiti per gravità del trauma",
+    "Discutere il momento di somministrazione"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effects of tranexamic acid on death, disability, vascular occlusive events and other morbidities in patients with acute traumatic brain injury (CRASH-3): a randomised, placebo-controlled trial",
+   "pmid": "31623894",
+   "doi": "10.1016/s0140-6736(19)32233-0",
+   "title": "Effects of tranexamic acid on death, disability, vascular occlusive events and other morbidities in patients with acute traumatic brain injury (CRASH-3): a randomised, placebo-controlled trial",
+   "authors": [
+    "CRASH-3 trial collaborators"
+   ],
+   "journal": "Lancet",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:03.973Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ii-prorata",
+   "topic_id": "icu-infections",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla guida della terapia antibiotica con procalcitonina in terapia intensiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere la strategia guidata dal biomarcatore",
+    "Discutere esiti di sicurezza e riduzione dell'esposizione agli antibiotici"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Use of procalcitonin to reduce patients' exposure to antibiotics in intensive care units (PRORATA trial): a multicentre randomised controlled trial",
+   "pmid": "20097417",
+   "doi": "10.1016/s0140-6736(09)61879-1",
+   "title": "Use of procalcitonin to reduce patients' exposure to antibiotics in intensive care units (PRORATA trial): a multicentre randomised controlled trial",
+   "authors": [
+    "Bouadma L",
+    "Luyt CE",
+    "Tubach F"
+   ],
+   "journal": "Lancet",
+   "pub_year": 2010,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:05.055Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ii-chastre",
+   "topic_id": "icu-infections",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla durata della terapia antibiotica nella polmonite associata a ventilatore.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere i bracci di durata",
+    "Discutere i sottogruppi microbiologici"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Comparison of 8 vs 15 days of antibiotic therapy for ventilator-associated pneumonia in adults: a randomized trial",
+   "pmid": "14625336",
+   "doi": "10.1001/jama.290.19.2588",
+   "title": "Comparison of 8 vs 15 days of antibiotic therapy for ventilator-associated pneumonia in adults: a randomized trial",
+   "authors": [
+    "Chastre J",
+    "Wolff M",
+    "Fagon JY"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2003,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:06.009Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ii-idsa",
+   "topic_id": "icu-infections",
+   "position": 30,
+   "item_type": "guideline",
+   "rationale": "Linea guida su gestione di polmonite nosocomiale e associata a ventilatore.",
+   "prerequisites": [
+    "ii-chastre"
+   ],
+   "objectives": [
+    "Riassumere raccomandazioni su terapia empirica e durata",
+    "Riconoscere i fattori di rischio per patogeni resistenti"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Management of adults with hospital-acquired and ventilator-associated pneumonia: 2016 clinical practice guidelines by the Infectious Diseases Society of America and the American Thoracic Society",
+   "pmid": "27418577",
+   "doi": "10.1093/cid/ciw353",
+   "title": "Management of Adults With Hospital-acquired and Ventilator-associated Pneumonia: 2016 Clinical Practice Guidelines by the Infectious Diseases Society of America and the American Thoracic Society",
+   "authors": [
+    "Kalil AC",
+    "Metersky ML",
+    "Klompas M"
+   ],
+   "journal": "Clin Infect Dis",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:07.032Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ii-bling3",
+   "topic_id": "icu-infections",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'infusione continua rispetto a quella intermittente di beta-lattamici nel paziente critico con sepsi.",
+   "prerequisites": [
+    "ii-idsa"
+   ],
+   "objectives": [
+    "Descrivere confronto ed esito principale",
+    "Collegare farmacocinetica e risultati clinici"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Continuous vs intermittent β-lactam antibiotic infusions in critically ill patients with sepsis: the BLING III randomized clinical trial",
+   "pmid": "38864155",
+   "doi": "10.1001/jama.2024.9779",
+   "title": "Continuous vs Intermittent &#x3b2;-Lactam Antibiotic Infusions in Critically Ill Patients With Sepsis: The BLING III Randomized Clinical Trial",
+   "authors": [
+    "Dulhunty JM",
+    "Brett SJ",
+    "De Waele JJ"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2024,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:08.209Z",
+   "match_score": 0.93,
+   "verification_note": null
+  },
+  {
+   "id": "wr-esteban",
+   "topic_id": "weaning-recovery",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial storico sui metodi di svezzamento dalla ventilazione meccanica.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere i quattro metodi",
+    "Discutere perché la prova di respiro spontaneo è diventata uno standard"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "A comparison of four methods of weaning patients from mechanical ventilation",
+   "pmid": "7823995",
+   "doi": "10.1056/nejm199502093320601",
+   "title": "A comparison of four methods of weaning patients from mechanical ventilation. Spanish Lung Failure Collaborative Group",
+   "authors": [
+    "Esteban A",
+    "Frutos F",
+    "Tobin MJ"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 1995,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:11.183Z",
+   "match_score": 0.58,
+   "verification_note": null
+  },
+  {
+   "id": "wr-subira",
+   "topic_id": "weaning-recovery",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla prova di respiro spontaneo con pressione di supporto o con tubo a T.",
+   "prerequisites": [
+    "wr-esteban"
+   ],
+   "objectives": [
+    "Descrivere i due tipi di prova",
+    "Discutere l'esito sull'estubazione riuscita"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effect of pressure support vs T-piece ventilation strategies during spontaneous breathing trials on successful extubation among patients receiving mechanical ventilation: a randomized clinical trial",
+   "pmid": "31184740",
+   "doi": "10.1001/jama.2019.7234",
+   "title": "Effect of Pressure Support vs T-Piece Ventilation Strategies During Spontaneous Breathing Trials on Successful Extubation Among Patients Receiving Mechanical Ventilation: A Randomized Clinical Trial",
+   "authors": [
+    "Subir&#xe0; C",
+    "Hern&#xe1;ndez G",
+    "V&#xe1;zquez A"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:12.188Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "wr-ats",
+   "topic_id": "weaning-recovery",
+   "position": 30,
+   "item_type": "guideline",
+   "rationale": "Linea guida sulla liberazione dalla ventilazione meccanica.",
+   "prerequisites": [
+    "wr-esteban"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su prove di respiro spontaneo e sedazione",
+    "Applicarle a un caso di svezzamento difficile"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "An official American Thoracic Society/American College of Chest Physicians clinical practice guideline: liberation from mechanical ventilation in critically ill adults",
+   "pmid": "27762608",
+   "doi": "10.1164/rccm.201610-2076st",
+   "title": "Official Executive Summary of an American Thoracic Society/American College of Chest Physicians Clinical Practice Guideline: Liberation from Mechanical Ventilation in Critically Ill Adults",
+   "authors": [
+    "Schmidt GA",
+    "Girard TD",
+    "Kress JP"
+   ],
+   "journal": "Am J Respir Crit Care Med",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:13.259Z",
+   "match_score": 0.89,
+   "verification_note": null
+  },
+  {
+   "id": "wr-schweickert",
+   "topic_id": "weaning-recovery",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla fisioterapia e terapia occupazionale precoci nei pazienti ventilati.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere l'intervento precoce",
+    "Discutere l'esito funzionale alla dimissione"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Early physical and occupational therapy in mechanically ventilated, critically ill patients: a randomised controlled trial",
+   "pmid": "19446324",
+   "doi": "10.1016/s0140-6736(09)60658-9",
+   "title": "Early physical and occupational therapy in mechanically ventilated, critically ill patients: a randomised controlled trial",
+   "authors": [
+    "Schweickert WD",
+    "Pohlman MC",
+    "Pohlman AS"
+   ],
+   "journal": "Lancet",
+   "pub_year": 2009,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:16.522Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "wr-pandharipande",
+   "topic_id": "weaning-recovery",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Studio di coorte sul deterioramento cognitivo a lungo termine dopo malattia critica.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere frequenza e fattori associati",
+    "Collegare il risultato alla prevenzione del delirium"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Long-term cognitive impairment after critical illness",
+   "pmid": "24088092",
+   "doi": "10.1056/nejmoa1301372",
+   "title": "Long-term cognitive impairment after critical illness",
+   "authors": [
+    "Pandharipande PP",
+    "Girard TD",
+    "Jackson JC"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:19.399Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "wr-needham",
+   "topic_id": "weaning-recovery",
+   "position": 60,
+   "item_type": "review",
+   "rationale": "Documento di consenso sul recupero dopo la terapia intensiva e la sindrome post-terapia intensiva.",
+   "prerequisites": [
+    "wr-pandharipande"
+   ],
+   "objectives": [
+    "Descrivere le componenti della sindrome post-terapia intensiva",
+    "Indicare interventi per migliorare gli esiti a lungo termine"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Improving long-term outcomes after discharge from intensive care unit: report from a stakeholders' conference",
+   "pmid": "21946660",
+   "doi": "10.1097/ccm.0b013e318232da75",
+   "title": "Improving long-term outcomes after discharge from intensive care unit: report from a stakeholders' conference",
+   "authors": [
+    "Needham DM",
+    "Davidson J",
+    "Cohen H"
+   ],
+   "journal": "Crit Care Med",
+   "pub_year": 2012,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:20.503Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ap-stronger",
+   "topic_id": "anesthetic-pharmacology",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Studio di coorte appaiata sull'antagonismo del blocco neuromuscolare con sugammadex o neostigmina e complicanze polmonari.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere il confronto e il metodo di appaiamento",
+    "Riconoscere i limiti di uno studio di coorte"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Sugammadex versus neostigmine for reversal of neuromuscular blockade and postoperative pulmonary complications (STRONGER): a multicenter matched cohort analysis",
+   "pmid": "32282427",
+   "doi": "10.1097/aln.0000000000003256",
+   "title": "Sugammadex versus Neostigmine for Reversal of Neuromuscular Blockade and Postoperative Pulmonary Complications (STRONGER): A Multicenter Matched Cohort Analysis",
+   "authors": [
+    "Kheterpal S",
+    "Vaughn MT",
+    "Dubovoy TZ"
+   ],
+   "journal": "Anesthesiology",
+   "pub_year": 2020,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:21.504Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ap-murphy",
+   "topic_id": "anesthetic-pharmacology",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Studio sul blocco neuromuscolare residuo e gli eventi respiratori critici in sala risveglio.",
+   "prerequisites": [],
+   "objectives": [
+    "Definire il blocco residuo e come si misura",
+    "Discutere l'impatto sulla sicurezza"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Residual neuromuscular blockade and critical respiratory events in the postanesthesia care unit",
+   "pmid": "18635478",
+   "doi": "10.1213/ane.0b013e31816d1268",
+   "title": "Residual neuromuscular blockade and critical respiratory events in the postanesthesia care unit",
+   "authors": [
+    "Murphy GS",
+    "Szokol JW",
+    "Marymont JH"
+   ],
+   "journal": "Anesth Analg",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:24.591Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ap-asa-nmb",
+   "topic_id": "anesthetic-pharmacology",
+   "position": 30,
+   "item_type": "guideline",
+   "rationale": "Linea guida sul monitoraggio e l'antagonismo del blocco neuromuscolare.",
+   "prerequisites": [
+    "ap-murphy"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni sul monitoraggio quantitativo",
+    "Applicarle alla pratica di reversal"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "2023 American Society of Anesthesiologists Practice Guidelines for Monitoring and Antagonism of Neuromuscular Blockade: A Report by the American Society of Anesthesiologists Task Force on Neuromuscular Blockade",
+   "pmid": "36520073",
+   "doi": "10.1097/aln.0000000000004379",
+   "title": "2023 American Society of Anesthesiologists Practice Guidelines for Monitoring and Antagonism of Neuromuscular Blockade: A Report by the American Society of Anesthesiologists Task Force on Neuromuscular Blockade",
+   "authors": [
+    "Thilen SR",
+    "Weigel WA",
+    "Todd MM"
+   ],
+   "journal": "Anesthesiology",
+   "pub_year": 2023,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:25.532Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ap-bunaware",
+   "topic_id": "anesthetic-pharmacology",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'uso dell'indice bispettrale per prevenire il ricordo intraoperatorio in pazienti ad alto rischio.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere la strategia guidata dal BIS",
+    "Discutere le conclusioni sul ruolo del monitoraggio"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Anesthesia awareness and the bispectral index",
+   "pmid": "19097272",
+   "doi": "10.1016/j.annfar.2008.10.013",
+   "title": "[Anesthesia awareness and the bispectral index]",
+   "authors": [
+    "Dupont H"
+   ],
+   "journal": "Ann Fr Anesth Reanim",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:28.624Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ap-bagrecall",
+   "topic_id": "anesthetic-pharmacology",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial che confronta strategie di monitoraggio per prevenire il ricordo intraoperatorio.",
+   "prerequisites": [
+    "ap-bunaware"
+   ],
+   "objectives": [
+    "Confrontare le strategie con B-Unaware",
+    "Discutere le implicazioni per la pratica"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Prevention of intraoperative awareness in a high-risk surgical population",
+   "pmid": "21848460",
+   "doi": "10.1056/nejmoa1100403",
+   "title": "Prevention of intraoperative awareness in a high-risk surgical population",
+   "authors": [
+    "Avidan MS",
+    "Jacobsohn E",
+    "Glick D"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2011,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:29.735Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-das",
+   "topic_id": "airway",
+   "position": 10,
+   "item_type": "guideline",
+   "rationale": "Linee guida sul trattamento dell'intubazione difficile inattesa nell'adulto.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere l'algoritmo per piani A, B, C e D",
+    "Applicare l'algoritmo a uno scenario clinico"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Difficult Airway Society 2015 guidelines for management of unanticipated difficult intubation in adults",
+   "pmid": "26556848",
+   "doi": "10.1093/bja/aev371",
+   "title": "Difficult Airway Society 2015 guidelines for management of unanticipated difficult intubation in adults",
+   "authors": [
+    "Frerk C",
+    "Mitchell VS",
+    "McNarry AF"
+   ],
+   "journal": "Br J Anaesth",
+   "pub_year": 2015,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:32.734Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-asa",
+   "topic_id": "airway",
+   "position": 20,
+   "item_type": "guideline",
+   "rationale": "Linee guida ASA sulla gestione della via aerea difficile.",
+   "prerequisites": [
+    "aw-das"
+   ],
+   "objectives": [
+    "Confrontare le raccomandazioni con le linee guida DAS",
+    "Elencare le strategie di preparazione"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "2022 American Society of Anesthesiologists practice guidelines for management of the difficult airway",
+   "pmid": "34762729",
+   "doi": "10.1097/aln.0000000000004002",
+   "title": "2022 American Society of Anesthesiologists Practice Guidelines for Management of the Difficult Airway",
+   "authors": [
+    "Apfelbaum JL",
+    "Hagberg CA",
+    "Connis RT"
+   ],
+   "journal": "Anesthesiology",
+   "pub_year": 2022,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:33.816Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-device",
+   "topic_id": "airway",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla videolaringoscopia rispetto alla laringoscopia diretta nei pazienti critici.",
+   "prerequisites": [
+    "aw-das"
+   ],
+   "objectives": [
+    "Descrivere esito principale e popolazione",
+    "Discutere la rilevanza per il primo tentativo di intubazione"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Video versus direct laryngoscopy for tracheal intubation of critically ill adults",
+   "pmid": "37326325",
+   "doi": "10.1056/nejmoa2301601",
+   "title": "Video versus Direct Laryngoscopy for Tracheal Intubation of Critically Ill Adults",
+   "authors": [
+    "Prekker ME",
+    "Driver BE",
+    "Trent SA"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2023,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:34.785Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-beam",
+   "topic_id": "airway",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'uso del bougie rispetto al tubo con mandrino per il successo al primo tentativo di intubazione in pazienti con via aerea difficile in pronto soccorso.",
+   "prerequisites": [
+    "aw-device"
+   ],
+   "objectives": [
+    "Descrivere il confronto e l'esito",
+    "Discutere l'applicabilità in sala operatoria"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effect of Use of a Bougie vs Endotracheal Tube and Stylet on First-Attempt Intubation Success Among Patients With Difficult Airways Undergoing Emergency Intubation: A Randomized Clinical Trial",
+   "pmid": "29800096",
+   "doi": "10.1001/jama.2018.6496",
+   "title": "Effect of Use of a Bougie vs Endotracheal Tube and Stylet on First-Attempt Intubation Success Among Patients With Difficult Airways Undergoing Emergency Intubation: A Randomized Clinical Trial",
+   "authors": [
+    "Driver BE",
+    "Prekker ME",
+    "Klein LR"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:37.943Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-preoxi",
+   "topic_id": "airway",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla preossigenazione con ventilazione non invasiva rispetto a maschera con pallone.",
+   "prerequisites": [
+    "aw-device"
+   ],
+   "objectives": [
+    "Descrivere l'esito di ipossiemia",
+    "Collegare il risultato alla sicurezza dell'intubazione"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Noninvasive ventilation for preoxygenation during emergency intubation",
+   "pmid": "38869091",
+   "doi": "10.1056/nejmoa2313680",
+   "title": "Noninvasive Ventilation for Preoxygenation during Emergency Intubation",
+   "authors": [
+    "Gibbs KW",
+    "Semler MW",
+    "Driver BE"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2024,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:43.073Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-prepare2",
+   "topic_id": "airway",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul bolo di fluidi per prevenire il collasso cardiovascolare durante l'intubazione di pazienti critici.",
+   "prerequisites": [
+    "aw-device"
+   ],
+   "objectives": [
+    "Descrivere esito composito e popolazione",
+    "Discutere come stratificare il rischio emodinamico"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effect of a fluid bolus on cardiovascular collapse among critically ill adults undergoing tracheal intubation (PrePARE): a randomised controlled trial",
+   "pmid": "31585796",
+   "doi": "10.1016/s2213-2600(19)30246-2",
+   "title": "Effect of a fluid bolus on cardiovascular collapse among critically ill adults undergoing tracheal intubation (PrePARE): a randomised controlled trial",
+   "authors": [
+    "Janz DR",
+    "Casey JD",
+    "Semler MW"
+   ],
+   "journal": "Lancet Respir Med",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:44.163Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "aw-lewis",
+   "topic_id": "airway",
+   "position": 70,
+   "item_type": "review",
+   "rationale": "Revisione sistematica (Cochrane) che confronta videolaringoscopia e laringoscopia diretta nell'adulto.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere gli esiti analizzati",
+    "Valutare la certezza delle evidenze"
+   ],
+   "reading_minutes": 35,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Videolaryngoscopy versus direct laryngoscopy for adult patients requiring tracheal intubation",
+   "pmid": "27844477",
+   "doi": "10.1002/14651858.cd011136.pub2",
+   "title": "Videolaryngoscopy versus direct laryngoscopy for adult patients requiring tracheal intubation",
+   "authors": [
+    "Lewis SR",
+    "Butler AR",
+    "Parker J"
+   ],
+   "journal": "Cochrane Database Syst Rev",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:45.141Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rg-last",
+   "topic_id": "regional",
+   "position": 20,
+   "item_type": "guideline",
+   "rationale": "Documento di consenso sulla tossicità sistemica da anestetici locali, con trattamento.",
+   "prerequisites": [],
+   "objectives": [
+    "Riconoscere i segni di tossicità sistemica",
+    "Descrivere il trattamento con emulsione lipidica"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The American Society of Regional Anesthesia and Pain Medicine third practice advisory on local anesthetic systemic toxicity: executive summary 2017",
+   "pmid": "29356773",
+   "doi": "10.1097/aap.0000000000000720",
+   "title": "The Third American Society of Regional Anesthesia and Pain Medicine Practice Advisory on Local Anesthetic Systemic Toxicity: Executive Summary 2017",
+   "authors": [
+    "Neal JM",
+    "Barrington MJ",
+    "Fettiplace MR"
+   ],
+   "journal": "Reg Anesth Pain Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:46.181Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rg-asra4",
+   "topic_id": "regional",
+   "position": 30,
+   "item_type": "guideline",
+   "rationale": "Linee guida sulle tecniche neuroassiali e sui blocchi periferici nei pazienti in terapia antitrombotica.",
+   "prerequisites": [],
+   "objectives": [
+    "Elencare gli intervalli per i principali farmaci antitrombotici",
+    "Applicarli a casi clinici"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Regional anesthesia in the patient receiving antithrombotic or thrombolytic therapy: American Society of Regional Anesthesia and Pain Medicine evidence-based guidelines (fourth edition)",
+   "pmid": "29561531",
+   "doi": "10.1097/aap.0000000000000763",
+   "title": "Regional Anesthesia in the Patient Receiving Antithrombotic or Thrombolytic Therapy: American Society of Regional Anesthesia and Pain Medicine Evidence-Based Guidelines (Fourth Edition)",
+   "authors": [
+    "Horlocker TT",
+    "Vandermeuelen E",
+    "Kopp SL"
+   ],
+   "journal": "Reg Anesth Pain Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:49.232Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ct-trics3",
+   "topic_id": "cv-thoracic",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulle soglie trasfusionali in chirurgia cardiaca.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere le soglie confrontate",
+    "Discutere la non inferiorità e le sue implicazioni"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Restrictive or liberal red-cell transfusion for cardiac surgery",
+   "pmid": "29130845",
+   "doi": "10.1056/nejmoa1711818",
+   "title": "Restrictive or Liberal Red-Cell Transfusion for Cardiac Surgery",
+   "authors": [
+    "Mazer CD",
+    "Whitlock RP",
+    "Fergusson DA"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:50.248Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ct-atacas",
+   "topic_id": "cv-thoracic",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'acido tranexamico in pazienti sottoposti a bypass coronarico.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere esiti di sanguinamento e complicanze",
+    "Discutere il bilancio rischio-beneficio"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Tranexamic acid in patients undergoing coronary-artery surgery",
+   "pmid": "27774838",
+   "doi": "10.1056/nejmoa1606424",
+   "title": "Tranexamic Acid in Patients Undergoing Coronary-Artery Surgery",
+   "authors": [
+    "Myles PS",
+    "Smith JA",
+    "Forbes A"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:55.370Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ct-eras-lung",
+   "topic_id": "cv-thoracic",
+   "position": 40,
+   "item_type": "guideline",
+   "rationale": "Linee guida ERAS per la chirurgia polmonare.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere le raccomandazioni anestesiologiche",
+    "Collegarle all'analgesia multimodale"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Guidelines for enhanced recovery after lung surgery: recommendations of the Enhanced Recovery After Surgery (ERAS) Society and the European Society of Thoracic Surgeons (ESTS)",
+   "pmid": "30304509",
+   "doi": "10.1093/ejcts/ezy301",
+   "title": "Guidelines for enhanced recovery after lung surgery: recommendations of the Enhanced Recovery After Surgery (ERAS&#xae;) Society and the European Society of Thoracic Surgeons (ESTS)",
+   "authors": [
+    "Batchelor TJP",
+    "Rasburn NJ",
+    "Abdelnour-Berchtold E"
+   ],
+   "journal": "Eur J Cardiothorac Surg",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:56.431Z",
+   "match_score": 0.93,
+   "verification_note": null
+  },
+  {
+   "id": "op-gas",
+   "topic_id": "obstetric-pediatric",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'esito neuroevolutivo dopo anestesia generale o regionale in età infantile.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere l'esito principale e l'ipotesi di equivalenza",
+    "Discutere cosa dice (e non dice) sull'esposizione prolungata"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Neurodevelopmental outcome at 5 years of age after general anaesthesia or awake-regional anaesthesia in infancy (GAS): an international multicentre, randomised, controlled equivalence trial",
+   "pmid": "31418482",
+   "doi": "10.1111/apa.14943",
+   "title": "Neurodevelopmental outcome at 5 years of age after general anaesthesia or awake-regional anaesthesia in infancy (GAS): An international, multicentre, randomised, controlled equivalence trial",
+   "authors": [
+    "Shukla A",
+    "Chowdhary V"
+   ],
+   "journal": "Acta Paediatr",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:57.368Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "op-panda",
+   "topic_id": "obstetric-pediatric",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Studio su fratelli appaiati sull'esposizione singola ad anestesia generale e sviluppo cognitivo.",
+   "prerequisites": [
+    "op-gas"
+   ],
+   "objectives": [
+    "Descrivere il disegno con fratelli appaiati",
+    "Confrontare con GAS"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Association between a single general anesthesia exposure before age 36 months and neurocognitive outcomes in later childhood",
+   "pmid": "27272582",
+   "doi": "10.1001/jama.2016.6967",
+   "title": "Association Between a Single General Anesthesia Exposure Before Age 36 Months and Neurocognitive Outcomes in Later Childhood",
+   "authors": [
+    "Sun LS",
+    "Li G",
+    "Miller TL"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:58.443Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "op-apricot",
+   "topic_id": "obstetric-pediatric",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Studio osservazionale europeo multicentrico sull'incidenza di eventi critici gravi in anestesia pediatrica.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere frequenza e tipi di eventi",
+    "Discutere i fattori di rischio modificabili"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Incidence of severe critical events in paediatric anaesthesia (APRICOT): a prospective multicentre observational study in 261 hospitals in Europe",
+   "pmid": "28363725",
+   "doi": "10.1016/s2213-2600(17)30116-9",
+   "title": "Incidence of severe critical events in paediatric anaesthesia (APRICOT): a prospective multicentre observational study in 261 hospitals in Europe",
+   "authors": [
+    "Habre W",
+    "Disma N",
+    "Virag K"
+   ],
+   "journal": "Lancet Respir Med",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:02:59.430Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "op-soap",
+   "topic_id": "obstetric-pediatric",
+   "position": 40,
+   "item_type": "guideline",
+   "rationale": "Linee guida sull'anestesia ostetrica.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere raccomandazioni su analgesia del travaglio e cesareo",
+    "Applicarle a scenari clinici"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Practice guidelines for obstetric anesthesia: an updated report by the American Society of Anesthesiologists Task Force on Obstetric Anesthesia and the Society for Obstetric Anesthesia and Perinatology",
+   "pmid": "26580836",
+   "doi": "10.1097/aln.0000000000000935",
+   "title": "Practice Guidelines for Obstetric Anesthesia: An Updated Report by the American Society of Anesthesiologists Task Force on Obstetric Anesthesia and the Society for Obstetric Anesthesia and Perinatology",
+   "authors": [],
+   "journal": "Anesthesiology",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:02.568Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-poise",
+   "topic_id": "perioperative",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul betabloccante perioperatorio in chirurgia non cardiaca.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere benefici e rischi osservati",
+    "Discutere le implicazioni per la profilassi perioperatoria"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial",
+   "pmid": "18479744",
+   "doi": "10.1016/s0140-6736(08)60601-7",
+   "title": "Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial",
+   "authors": [
+    "POISE Study Group",
+    "Devereaux PJ",
+    "Yang H"
+   ],
+   "journal": "Lancet",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:05.785Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-optimise",
+   "topic_id": "perioperative",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial e meta-analisi sulla terapia emodinamica guidata dalla gittata in chirurgia gastrointestinale maggiore.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere l'algoritmo e l'esito composito",
+    "Discutere come interpretare risultati neutri con meta-analisi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effect of a perioperative, cardiac output-guided hemodynamic therapy algorithm on outcomes following major gastrointestinal surgery: a randomized clinical trial and systematic review",
+   "pmid": "24842135",
+   "doi": "10.1001/jama.2014.5305",
+   "title": "Effect of a perioperative, cardiac output-guided hemodynamic therapy algorithm on outcomes following major gastrointestinal surgery: a randomized clinical trial and systematic review",
+   "authors": [
+    "Pearse RM",
+    "Harrison DA",
+    "MacDonald N"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2014,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:08.732Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-relief",
+   "topic_id": "perioperative",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla fluidoterapia restrittiva o liberale in chirurgia addominale maggiore.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere le due strategie",
+    "Discutere gli esiti renali e infettivi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Restrictive versus liberal fluid therapy for major abdominal surgery",
+   "pmid": "29742967",
+   "doi": "10.1056/nejmoa1801601",
+   "title": "Restrictive versus Liberal Fluid Therapy for Major Abdominal Surgery",
+   "authors": [
+    "Myles PS",
+    "Bellomo R",
+    "Corcoran T"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2018,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:09.837Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-improve",
+   "topic_id": "perioperative",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulla ventilazione protettiva intraoperatoria in chirurgia addominale.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere la strategia ventilatoria",
+    "Discutere gli esiti polmonari ed extrapolmonari"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "A trial of intraoperative low-tidal-volume ventilation in abdominal surgery",
+   "pmid": "23902482",
+   "doi": "10.1056/nejmoa1301082",
+   "title": "A trial of intraoperative low-tidal-volume ventilation in abdominal surgery",
+   "authors": [
+    "Futier E",
+    "Constantin JM",
+    "Paugam-Burtz C"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:12.875Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-paddi",
+   "topic_id": "perioperative",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul desametasone intraoperatorio e infezione del sito chirurgico.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere l'ipotesi di non inferiorità",
+    "Discutere la sicurezza di una dose singola"
+   ],
+   "reading_minutes": 20,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Dexamethasone and surgical-site infection",
+   "pmid": "33951362",
+   "doi": "10.1056/nejmoa2028982",
+   "title": "Dexamethasone and Surgical-Site Infection",
+   "authors": [
+    "Corcoran TB",
+    "Myles PS",
+    "Forbes AB"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2021,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:13.867Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-walsh",
+   "topic_id": "perioperative",
+   "position": 60,
+   "item_type": "landmark_trial",
+   "rationale": "Studio retrospettivo sulla relazione tra pressione arteriosa media intraoperatoria ed esiti.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere le soglie e le complicanze associate",
+    "Riconoscere i limiti di un'analisi retrospettiva"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Relationship between intraoperative mean arterial pressure and clinical outcomes after noncardiac surgery: toward an empirical definition of hypotension",
+   "pmid": "23835589",
+   "doi": "10.1097/aln.0b013e3182a10e26",
+   "title": "Relationship between intraoperative mean arterial pressure and clinical outcomes after noncardiac surgery: toward an empirical definition of hypotension",
+   "authors": [
+    "Walsh M",
+    "Devereaux PJ",
+    "Garg AX"
+   ],
+   "journal": "Anesthesiology",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:14.887Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-esc2022",
+   "topic_id": "perioperative",
+   "position": 70,
+   "item_type": "guideline",
+   "rationale": "Linee guida europee sulla valutazione cardiovascolare pre-operatoria.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere la stratificazione del rischio",
+    "Descrivere le raccomandazioni sulla gestione dei farmaci"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+   "pmid": "36017553",
+   "doi": "10.1093/eurheartj/ehac270",
+   "title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+   "authors": [
+    "Halvorsen S",
+    "Mehilli J",
+    "Cassese S"
+   ],
+   "journal": "Eur Heart J",
+   "pub_year": 2022,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:16.043Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "pm-eras-colo",
+   "topic_id": "perioperative",
+   "position": 80,
+   "item_type": "guideline",
+   "rationale": "Linee guida ERAS per la chirurgia colorettale elettiva.",
+   "prerequisites": [],
+   "objectives": [
+    "Elencare gli elementi del percorso ERAS",
+    "Collegarli agli esiti attesi"
+   ],
+   "reading_minutes": 45,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Guidelines for perioperative care in elective colorectal surgery: Enhanced Recovery After Surgery (ERAS) Society recommendations: 2018",
+   "pmid": "30426190",
+   "doi": "10.1007/s00268-018-4844-y",
+   "title": "Guidelines for Perioperative Care in Elective Colorectal Surgery: Enhanced Recovery After Surgery (ERAS&#xae;) Society Recommendations: 2018",
+   "authors": [
+    "Gustafsson UO",
+    "Scott MJ",
+    "Hubner M"
+   ],
+   "journal": "World J Surg",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:19.016Z",
+   "match_score": 0.93,
+   "verification_note": null
+  },
+  {
+   "id": "pm-lasvegas",
+   "topic_id": "perioperative",
+   "position": 90,
+   "item_type": "landmark_trial",
+   "rationale": "Studio osservazionale internazionale sulla ventilazione intraoperatoria e le complicanze polmonari.",
+   "prerequisites": [
+    "pm-improve"
+   ],
+   "objectives": [
+    "Descrivere la pratica ventilatoria osservata",
+    "Riconoscere i limiti osservazionali"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Epidemiology, practice of ventilation and outcome for patients at increased risk of postoperative pulmonary complications: LAS VEGAS - an observational study in 29 countries",
+   "pmid": "28633157",
+   "doi": "10.1097/eja.0000000000000646",
+   "title": "Epidemiology, practice of ventilation and outcome for patients at increased risk of postoperative pulmonary complications: LAS VEGAS - an observational study in 29 countries",
+   "authors": [
+    "LAS VEGAS investigators"
+   ],
+   "journal": "Eur J Anaesthesiol",
+   "pub_year": 2017,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:20.104Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "th-tricc",
+   "topic_id": "transfusion-hemostasis",
+   "position": 10,
+   "item_type": "landmark_trial",
+   "rationale": "Trial storico sulle soglie trasfusionali nel paziente critico.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere le strategie restrittiva e liberale",
+    "Discutere gli esiti per sottogruppi"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "A multicenter, randomized, controlled clinical trial of transfusion requirements in critical care",
+   "pmid": "9971864",
+   "doi": "10.1056/nejm199902113400601",
+   "title": "A multicenter, randomized, controlled clinical trial of transfusion requirements in critical care. Transfusion Requirements in Critical Care Investigators, Canadian Critical Care Trials Group",
+   "authors": [
+    "H&#xe9;bert PC",
+    "Wells G",
+    "Blajchman MA"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 1999,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:23.207Z",
+   "match_score": 0.67,
+   "verification_note": null
+  },
+  {
+   "id": "th-triss",
+   "topic_id": "transfusion-hemostasis",
+   "position": 20,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulle soglie trasfusionali nello shock settico.",
+   "prerequisites": [
+    "th-tricc"
+   ],
+   "objectives": [
+    "Descrivere le soglie confrontate",
+    "Discutere gli esiti di mortalità"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Lower versus higher hemoglobin threshold for transfusion in septic shock",
+   "pmid": "25270275",
+   "doi": "10.1056/nejmoa1406617",
+   "title": "Lower versus higher hemoglobin threshold for transfusion in septic shock",
+   "authors": [
+    "Holst LB",
+    "Haase N",
+    "Wetterslev J"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2014,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:26.195Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "th-villanueva",
+   "topic_id": "transfusion-hemostasis",
+   "position": 30,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sulle soglie trasfusionali nel sanguinamento gastrointestinale superiore.",
+   "prerequisites": [
+    "th-tricc"
+   ],
+   "objectives": [
+    "Descrivere la strategia restrittiva",
+    "Discutere esiti e limiti"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Transfusion strategies for acute upper gastrointestinal bleeding",
+   "pmid": "23940852",
+   "doi": "10.1016/j.rce.2013.03.003",
+   "title": "[Transfusion strategies in acute upper gastrointestinal bleeding]",
+   "authors": [
+    "Salgueiro Origlia G"
+   ],
+   "journal": "Rev Clin Esp (Barc)",
+   "pub_year": 2013,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:27.271Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "th-crash2",
+   "topic_id": "transfusion-hemostasis",
+   "position": 40,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sull'acido tranexamico nel trauma emorragico.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere esiti di mortalità per sanguinamento",
+    "Discutere l'importanza della precocità della somministrazione"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2): a randomised, placebo-controlled trial",
+   "pmid": "21702233",
+   "doi": null,
+   "title": "Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients with significant haemorrhage (CRASH-2) A randomised, placebo-controlled trial",
+   "authors": [
+    "Williams-Johnson JA",
+    "McDonald AH",
+    "Strachan GG"
+   ],
+   "journal": "West Indian Med J",
+   "pub_year": 2010,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:28.287Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "th-proppr",
+   "topic_id": "transfusion-hemostasis",
+   "position": 50,
+   "item_type": "landmark_trial",
+   "rationale": "Trial sul rapporto tra plasma, piastrine ed emazie nel trauma grave.",
+   "prerequisites": [
+    "th-crash2"
+   ],
+   "objectives": [
+    "Descrivere i due rapporti",
+    "Discutere gli esiti per emostasi e mortalità"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: the PROPPR randomized clinical trial",
+   "pmid": "25647203",
+   "doi": "10.1001/jama.2015.12",
+   "title": "Transfusion of plasma, platelets, and red blood cells in a 1:1:1 vs a 1:1:2 ratio and mortality in patients with severe trauma: the PROPPR randomized clinical trial",
+   "authors": [
+    "Holcomb JB",
+    "Tilley BC",
+    "Baraniuk S"
+   ],
+   "journal": "JAMA",
+   "pub_year": 2015,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:31.350Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "th-eu-trauma",
+   "topic_id": "transfusion-hemostasis",
+   "position": 60,
+   "item_type": "guideline",
+   "rationale": "Linea guida europea sul sanguinamento maggiore e la coagulopatia da trauma.",
+   "prerequisites": [
+    "th-proppr"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su emostasi e trasfusioni",
+    "Applicarle a un caso di trauma emorragico"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition",
+   "pmid": "36859355",
+   "doi": "10.1186/s13054-023-04327-7",
+   "title": "The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition",
+   "authors": [
+    "Rossaint R",
+    "Afshari A",
+    "Bouillon B"
+   ],
+   "journal": "Crit Care",
+   "pub_year": 2023,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:34.413Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "th-esaic",
+   "topic_id": "transfusion-hemostasis",
+   "position": 70,
+   "item_type": "guideline",
+   "rationale": "Linee guida ESAIC sul sanguinamento perioperatorio grave.",
+   "prerequisites": [
+    "th-tricc"
+   ],
+   "objectives": [
+    "Riassumere le raccomandazioni su sanguinamento e coagulopatia",
+    "Confrontarle con le linee guida sul trauma"
+   ],
+   "reading_minutes": 60,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Management of severe perioperative bleeding: guidelines from the European Society of Anaesthesiology and Intensive Care: second update 2022",
+   "pmid": "36855941",
+   "doi": "10.1097/eja.0000000000001803",
+   "title": "Management of severe peri-operative bleeding: Guidelines from the European Society of Anaesthesiology and Intensive Care: Second update 2022",
+   "authors": [
+    "Kietaibl S",
+    "Ahmed A",
+    "Afshari A"
+   ],
+   "journal": "Eur J Anaesthesiol",
+   "pub_year": 2023,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:35.509Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-consort",
+   "topic_id": "critical-appraisal",
+   "position": 10,
+   "item_type": "method",
+   "rationale": "Linee guida per la rendicontazione dei trial randomizzati.",
+   "prerequisites": [],
+   "objectives": [
+    "Elencare gli elementi essenziali di un trial ben riportato",
+    "Usare la checklist per leggere un trial"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "CONSORT 2010 statement: updated guidelines for reporting parallel group randomised trials",
+   "pmid": "21350618",
+   "doi": "10.4103/0976-500x.72352",
+   "title": "CONSORT 2010 statement: Updated guidelines for reporting parallel group randomised trials",
+   "authors": [
+    "Schulz KF",
+    "Altman DG",
+    "Moher D"
+   ],
+   "journal": "J Pharmacol Pharmacother",
+   "pub_year": 2010,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:36.564Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-prisma",
+   "topic_id": "critical-appraisal",
+   "position": 20,
+   "item_type": "method",
+   "rationale": "Linee guida per la rendicontazione di revisioni sistematiche.",
+   "prerequisites": [],
+   "objectives": [
+    "Elencare gli elementi di una revisione sistematica",
+    "Usare la checklist per valutare una meta-analisi"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+   "pmid": "34446261",
+   "doi": "10.1016/j.rec.2021.07.010",
+   "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+   "authors": [
+    "Page MJ",
+    "McKenzie JE",
+    "Bossuyt PM"
+   ],
+   "journal": "Rev Esp Cardiol (Engl Ed)",
+   "pub_year": 2021,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:37.656Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-rob2",
+   "topic_id": "critical-appraisal",
+   "position": 30,
+   "item_type": "method",
+   "rationale": "Strumento per valutare il rischio di bias nei trial randomizzati.",
+   "prerequisites": [
+    "ca-consort"
+   ],
+   "objectives": [
+    "Descrivere i domini di bias",
+    "Applicare lo strumento a un trial"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "RoB 2: a revised tool for assessing risk of bias in randomised trials",
+   "pmid": "31462531",
+   "doi": "10.1136/bmj.l4898",
+   "title": "RoB 2: a revised tool for assessing risk of bias in randomised trials",
+   "authors": [
+    "Sterne JAC",
+    "Savovi&#x107; J",
+    "Page MJ"
+   ],
+   "journal": "BMJ",
+   "pub_year": 2019,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:43.909Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-grade",
+   "topic_id": "critical-appraisal",
+   "position": 40,
+   "item_type": "method",
+   "rationale": "Sistema GRADE per valutare la qualità delle evidenze e la forza delle raccomandazioni.",
+   "prerequisites": [],
+   "objectives": [
+    "Spiegare i fattori che aumentano o riducono la qualità delle evidenze",
+    "Distinguere raccomandazioni forti e condizionate"
+   ],
+   "reading_minutes": 30,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "GRADE: an emerging consensus on rating quality of evidence and strength of recommendations",
+   "pmid": "18436948",
+   "doi": "10.1136/bmj.39489.470347.ad",
+   "title": "GRADE: an emerging consensus on rating quality of evidence and strength of recommendations",
+   "authors": [
+    "Guyatt GH",
+    "Oxman AD",
+    "Vist GE"
+   ],
+   "journal": "BMJ",
+   "pub_year": 2008,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:47.031Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-ioannidis",
+   "topic_id": "critical-appraisal",
+   "position": 50,
+   "item_type": "method",
+   "rationale": "Saggio sulle ragioni per cui molti risultati pubblicati possono non essere replicati.",
+   "prerequisites": [],
+   "objectives": [
+    "Spiegare il ruolo di potenza, bias e probabilità pre-test",
+    "Applicare il ragionamento alla lettura di uno studio"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Why most published research findings are false",
+   "pmid": "16060722",
+   "doi": "10.1371/journal.pmed.0020124",
+   "title": "Why most published research findings are false",
+   "authors": [
+    "Ioannidis JP"
+   ],
+   "journal": "PLoS Med",
+   "pub_year": 2005,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:50.181Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-fragility",
+   "topic_id": "critical-appraisal",
+   "position": 60,
+   "item_type": "method",
+   "rationale": "Studio sul fragility index nei trial di terapia intensiva.",
+   "prerequisites": [
+    "ca-consort"
+   ],
+   "objectives": [
+    "Definire il fragility index",
+    "Valutare quanto sia fragile un risultato significativo"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The fragility index in multicenter randomized controlled critical care trials",
+   "pmid": "26963326",
+   "doi": "10.1097/ccm.0000000000001670",
+   "title": "The Fragility Index in Multicenter Randomized Controlled Critical Care Trials",
+   "authors": [
+    "Ridgeon EE",
+    "Young PJ",
+    "Bellomo R"
+   ],
+   "journal": "Crit Care Med",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:51.111Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "ca-bayes",
+   "topic_id": "critical-appraisal",
+   "position": 70,
+   "item_type": "method",
+   "rationale": "Introduzione all'analisi bayesiana dei trial di terapia intensiva con esempio di rianalisi.",
+   "prerequisites": [
+    "ca-fragility"
+   ],
+   "objectives": [
+    "Spiegare la differenza tra analisi frequentista e bayesiana",
+    "Interpretare una probabilità a posteriori"
+   ],
+   "reading_minutes": 40,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Using Bayesian methods to augment the interpretation of critical care trials. An overview of theory and example reanalysis of the alveolar recruitment for acute respiratory distress syndrome trial",
+   "pmid": "33270526",
+   "doi": "10.1164/rccm.202006-2381cp",
+   "title": "Using Bayesian Methods to Augment the Interpretation of Critical Care Trials. An Overview of Theory and Example Reanalysis of the Alveolar Recruitment for Acute Respiratory Distress Syndrome Trial",
+   "authors": [
+    "Zampieri FG",
+    "Casey JD",
+    "Shankar-Hari M"
+   ],
+   "journal": "Am J Respir Crit Care Med",
+   "pub_year": 2021,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:52.212Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rg-regain",
+   "topic_id": "regional",
+   "position": 5,
+   "item_type": "landmark_trial",
+   "rationale": "Trial pragmatico multicentrico sull'anestesia spinale o generale nella chirurgia dell'anca dell'anziano.",
+   "prerequisites": [],
+   "objectives": [
+    "Descrivere l'esito principale (funzionalità a 60 giorni) e il disegno pragmatico",
+    "Discutere cosa significa per la scelta della tecnica in pazienti fragili"
+   ],
+   "reading_minutes": 25,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "Spinal Anesthesia or General Anesthesia for Hip Surgery in Older Adults",
+   "pmid": "34623788",
+   "doi": "10.1056/nejmoa2113514",
+   "title": "Spinal Anesthesia or General Anesthesia for Hip Surgery in Older Adults",
+   "authors": [
+    "Neuman MD",
+    "Feng R",
+    "Carson JL"
+   ],
+   "journal": "N Engl J Med",
+   "pub_year": 2021,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:55.272Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rg-asra-neuro",
+   "topic_id": "regional",
+   "position": 25,
+   "item_type": "guideline",
+   "rationale": "Documento di consenso sulle complicanze neurologiche associate all'anestesia loco-regionale e alla medicina del dolore.",
+   "prerequisites": [],
+   "objectives": [
+    "Elencare i fattori di rischio di danno neurologico",
+    "Descrivere come gestire un deficit neurologico dopo un blocco"
+   ],
+   "reading_minutes": 40,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The Second ASRA Practice Advisory on Neurologic Complications Associated With Regional Anesthesia and Pain Medicine: Executive Summary 2015",
+   "pmid": "26288034",
+   "doi": "10.1097/aap.0000000000000286",
+   "title": "The Second ASRA Practice Advisory on Neurologic Complications Associated With Regional Anesthesia and Pain Medicine: Executive Summary 2015",
+   "authors": [
+    "Neal JM",
+    "Barrington MJ",
+    "Brull R"
+   ],
+   "journal": "Reg Anesth Pain Med",
+   "pub_year": 2015,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:56.353Z",
+   "match_score": 1,
+   "verification_note": null
+  },
+  {
+   "id": "rg-asra-us",
+   "topic_id": "regional",
+   "position": 35,
+   "item_type": "review",
+   "rationale": "Valutazione basata sulle evidenze dell'ecoguida in anestesia loco-regionale.",
+   "prerequisites": [],
+   "objectives": [
+    "Riassumere le evidenze a favore della guida ecografica",
+    "Distinguere gli esiti dimostrati da quelli solo plausibili"
+   ],
+   "reading_minutes": 35,
+   "editorial_status": "draft_unreviewed",
+   "superseded_by": null,
+   "update_note": null,
+   "active": true,
+   "title_query": "The Second American Society of Regional Anesthesia and Pain Medicine Evidence-Based Medicine Assessment of Ultrasound-Guided Regional Anesthesia and Pain Medicine: Executive Summary",
+   "pmid": "26695878",
+   "doi": "10.1097/aap.0000000000000331",
+   "title": "The Second American Society of Regional Anesthesia and Pain Medicine Evidence-Based Medicine Assessment of Ultrasound-Guided Regional Anesthesia: Executive Summary",
+   "authors": [
+    "Neal JM",
+    "Brull R",
+    "Horn JL"
+   ],
+   "journal": "Reg Anesth Pain Med",
+   "pub_year": 2016,
+   "verification": "verified",
+   "verified_at": "2026-10-14T18:03:57.247Z",
+   "match_score": 1,
+   "verification_note": null
+  }
+ ]
+}

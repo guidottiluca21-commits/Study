@@ -1,0 +1,25 @@
+name: Database setup
+# Da lanciare a mano: applica le migrazioni e carica categorie e curriculum. È idempotente.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: db-setup
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          npm run db:migrate
+          npm run db:seed

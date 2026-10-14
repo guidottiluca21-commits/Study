@@ -1,0 +1,509 @@
+[
+ {
+  "id": "mech-vent",
+  "group_key": "icu",
+  "name_it": "Ventilazione meccanica",
+  "name_en": "Mechanical ventilation",
+  "pubmed_query": "(\"Respiration, Artificial\"[MeSH] OR \"mechanical ventilation\"[tiab] OR \"ventilator*\"[tiab] OR \"tidal volume\"[tiab] OR PEEP[tiab] OR \"driving pressure\"[tiab] OR \"lung-protective\"[tiab])",
+  "keywords": [
+   "mechanical ventilation",
+   "ventilator",
+   "tidal volume",
+   "peep",
+   "driving pressure",
+   "lung-protective",
+   "respiration, artificial",
+   "invasive ventilation"
+  ],
+  "sort_order": 10,
+  "active": true
+ },
+ {
+  "id": "ards",
+  "group_key": "icu",
+  "name_it": "ARDS",
+  "name_en": "ARDS",
+  "pubmed_query": "(\"Respiratory Distress Syndrome\"[MeSH] OR ARDS[tiab] OR \"acute respiratory distress\"[tiab] OR \"prone position*\"[tiab] OR \"extracorporeal membrane oxygenation\"[tiab] OR ECMO[tiab] OR \"acute hypoxemic respiratory failure\"[tiab])",
+  "keywords": [
+   "ards",
+   "acute respiratory distress",
+   "prone position",
+   "ecmo",
+   "extracorporeal membrane oxygenation",
+   "hypoxemic respiratory failure",
+   "respiratory distress syndrome"
+  ],
+  "sort_order": 20,
+  "active": true
+ },
+ {
+  "id": "sepsis",
+  "group_key": "icu",
+  "name_it": "Sepsi e shock settico",
+  "name_en": "Sepsis and septic shock",
+  "pubmed_query": "(\"Sepsis\"[MeSH] OR \"Shock, Septic\"[MeSH] OR sepsis[tiab] OR \"septic shock\"[tiab])",
+  "keywords": [
+   "sepsis",
+   "septic shock",
+   "surviving sepsis",
+   "septic"
+  ],
+  "sort_order": 30,
+  "active": true
+ },
+ {
+  "id": "hemodynamics",
+  "group_key": "icu",
+  "name_it": "Emodinamica",
+  "name_en": "Hemodynamics",
+  "pubmed_query": "(\"Hemodynamics\"[MeSH] OR \"Vasoconstrictor Agents\"[MeSH] OR vasopressor*[tiab] OR norepinephrine[tiab] OR \"fluid resuscitation\"[tiab] OR \"fluid responsiveness\"[tiab] OR \"cardiac output\"[tiab] OR \"cardiogenic shock\"[tiab])",
+  "keywords": [
+   "hemodynamic",
+   "vasopressor",
+   "norepinephrine",
+   "fluid resuscitation",
+   "fluid responsiveness",
+   "cardiac output",
+   "cardiogenic shock",
+   "vasopressin",
+   "shock"
+  ],
+  "sort_order": 40,
+  "active": true
+ },
+ {
+  "id": "nutrition",
+  "group_key": "icu",
+  "name_it": "Nutrizione clinica",
+  "name_en": "Clinical nutrition",
+  "pubmed_query": "((\"Nutritional Support\"[MeSH] OR \"Enteral Nutrition\"[MeSH] OR \"Parenteral Nutrition\"[MeSH] OR nutrition[tiab] OR feeding[tiab]) AND (\"Critical Illness\"[MeSH] OR \"Intensive Care Units\"[MeSH] OR \"intensive care\"[tiab] OR \"critically ill\"[tiab] OR ICU[tiab]))",
+  "keywords": [
+   "enteral nutrition",
+   "parenteral nutrition",
+   "nutritional support",
+   "feeding",
+   "protein",
+   "calorie"
+  ],
+  "sort_order": 50,
+  "active": true
+ },
+ {
+  "id": "crrt-aki",
+  "group_key": "icu",
+  "name_it": "CRRT e AKI",
+  "name_en": "CRRT and AKI",
+  "pubmed_query": "(\"Acute Kidney Injury\"[MeSH] OR \"Renal Replacement Therapy\"[MeSH] OR CRRT[tiab] OR \"continuous renal replacement\"[tiab] OR \"renal replacement therapy\"[tiab] OR \"acute kidney injury\"[tiab])",
+  "keywords": [
+   "acute kidney injury",
+   "renal replacement",
+   "crrt",
+   "hemofiltration",
+   "dialysis",
+   "aki"
+  ],
+  "sort_order": 60,
+  "active": true
+ },
+ {
+  "id": "sedation-delirium",
+  "group_key": "icu",
+  "name_it": "Sedazione, analgesia e delirium",
+  "name_en": "Sedation, analgesia and delirium",
+  "pubmed_query": "((delirium[tiab] OR \"Delirium\"[MeSH] OR sedation[tiab] OR \"Hypnotics and Sedatives\"[MeSH] OR dexmedetomidine[tiab] OR \"analgosedation\"[tiab]) AND (\"Critical Illness\"[MeSH] OR \"Intensive Care Units\"[MeSH] OR \"intensive care\"[tiab] OR ICU[tiab] OR \"critically ill\"[tiab]))",
+  "keywords": [
+   "delirium",
+   "sedation",
+   "dexmedetomidine",
+   "analgosedation",
+   "agitation",
+   "propofol",
+   "benzodiazepine"
+  ],
+  "sort_order": 70,
+  "active": true
+ },
+ {
+  "id": "icu-infections",
+  "group_key": "icu",
+  "name_it": "Infezioni in terapia intensiva",
+  "name_en": "ICU infections",
+  "pubmed_query": "((\"Cross Infection\"[MeSH] OR \"Pneumonia, Ventilator-Associated\"[MeSH] OR \"ventilator-associated pneumonia\"[tiab] OR \"bloodstream infection*\"[tiab] OR \"Catheter-Related Infections\"[MeSH] OR \"multidrug-resistant\"[tiab] OR \"healthcare-associated infection*\"[tiab]) AND (\"Intensive Care Units\"[MeSH] OR \"Critical Illness\"[MeSH] OR ICU[tiab] OR \"intensive care\"[tiab]))",
+  "keywords": [
+   "ventilator-associated pneumonia",
+   "bloodstream infection",
+   "catheter-related",
+   "multidrug-resistant",
+   "hospital-acquired",
+   "healthcare-associated",
+   "nosocomial",
+   "candidemia"
+  ],
+  "sort_order": 80,
+  "active": true
+ },
+ {
+  "id": "neurocritical",
+  "group_key": "icu",
+  "name_it": "Neurointensiva",
+  "name_en": "Neurocritical care",
+  "pubmed_query": "(\"Brain Injuries, Traumatic\"[MeSH] OR \"Intracranial Pressure\"[MeSH] OR \"Subarachnoid Hemorrhage\"[MeSH] OR \"status epilepticus\"[tiab] OR \"neurocritical care\"[tiab] OR \"intracranial hypertension\"[tiab] OR \"targeted temperature management\"[tiab] OR \"cardiac arrest\"[tiab])",
+  "keywords": [
+   "traumatic brain injury",
+   "intracranial pressure",
+   "subarachnoid",
+   "status epilepticus",
+   "neurocritical",
+   "cardiac arrest",
+   "targeted temperature",
+   "brain injury"
+  ],
+  "sort_order": 90,
+  "active": true
+ },
+ {
+  "id": "weaning-recovery",
+  "group_key": "icu",
+  "name_it": "Svezzamento ventilatorio e recupero post-ICU",
+  "name_en": "Weaning and post-ICU recovery",
+  "pubmed_query": "(\"Ventilator Weaning\"[MeSH] OR weaning[tiab] OR extubation[tiab] OR \"post-intensive care syndrome\"[tiab] OR \"ICU survivors\"[tiab] OR \"ICU-acquired weakness\"[tiab] OR tracheostomy[tiab] OR \"early mobili*\"[tiab] OR \"spontaneous breathing trial\"[tiab])",
+  "keywords": [
+   "weaning",
+   "extubation",
+   "post-intensive care",
+   "icu survivors",
+   "icu-acquired weakness",
+   "tracheostomy",
+   "early mobilization",
+   "spontaneous breathing trial",
+   "long-term outcome"
+  ],
+  "sort_order": 100,
+  "active": true
+ },
+ {
+  "id": "pharm-ga",
+  "group_key": "anesthesia",
+  "name_it": "Farmacologia e anestesia generale",
+  "name_en": "Pharmacology and general anesthesia",
+  "pubmed_query": "(\"Anesthetics, General\"[MeSH] OR \"Anesthetics, Intravenous\"[MeSH] OR \"Anesthetics, Inhalation\"[MeSH] OR propofol[tiab] OR sevoflurane[tiab] OR remimazolam[tiab] OR ketamine[tiab] OR \"neuromuscular block*\"[tiab] OR sugammadex[tiab] OR \"total intravenous anesthesia\"[tiab] OR \"opioid-free\"[tiab] OR \"general anesthesia\"[tiab] OR \"general anaesthesia\"[tiab])",
+  "keywords": [
+   "general anesthesia",
+   "general anaesthesia",
+   "propofol",
+   "sevoflurane",
+   "remimazolam",
+   "ketamine",
+   "sugammadex",
+   "neuromuscular block",
+   "total intravenous",
+   "anesthetic depth",
+   "opioid-free"
+  ],
+  "sort_order": 110,
+  "active": true
+ },
+ {
+  "id": "airway",
+  "group_key": "anesthesia",
+  "name_it": "Vie aeree",
+  "name_en": "Airway management",
+  "pubmed_query": "(\"Airway Management\"[MeSH] OR \"Intubation, Intratracheal\"[MeSH] OR \"Laryngoscopy\"[MeSH] OR \"difficult airway\"[tiab] OR videolaryngoscop*[tiab] OR \"supraglottic airway\"[tiab] OR \"rapid sequence\"[tiab] OR preoxygenation[tiab] OR \"tracheal intubation\"[tiab])",
+  "keywords": [
+   "airway management",
+   "intubation",
+   "laryngoscopy",
+   "difficult airway",
+   "videolaryngoscopy",
+   "supraglottic",
+   "rapid sequence",
+   "preoxygenation",
+   "tracheal intubation"
+  ],
+  "sort_order": 120,
+  "active": true
+ },
+ {
+  "id": "regional",
+  "group_key": "anesthesia",
+  "name_it": "Anestesia locoregionale",
+  "name_en": "Regional anesthesia",
+  "pubmed_query": "(\"Anesthesia, Conduction\"[MeSH] OR \"Nerve Block\"[MeSH] OR \"Anesthesia, Spinal\"[MeSH] OR \"Anesthesia, Epidural\"[MeSH] OR \"regional anesthesia\"[tiab] OR \"regional anaesthesia\"[tiab] OR \"peripheral nerve block*\"[tiab] OR \"ultrasound-guided block*\"[tiab] OR \"neuraxial\"[tiab])",
+  "keywords": [
+   "regional anesthesia",
+   "regional anaesthesia",
+   "nerve block",
+   "spinal anesthesia",
+   "epidural",
+   "neuraxial",
+   "peripheral nerve",
+   "local anesthetic",
+   "plane block"
+  ],
+  "sort_order": 130,
+  "active": true
+ },
+ {
+  "id": "cardiovascular-anesthesia",
+  "group_key": "anesthesia",
+  "name_it": "Anestesia cardiovascolare",
+  "name_en": "Cardiovascular anesthesia",
+  "pubmed_query": "((\"Cardiac Surgical Procedures\"[MeSH] OR \"cardiac surgery\"[tiab] OR \"cardiopulmonary bypass\"[tiab] OR \"Vascular Surgical Procedures\"[MeSH] OR \"transesophageal echocardiography\"[tiab]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR perioperative[tiab]))",
+  "keywords": [
+   "cardiac surgery",
+   "cardiopulmonary bypass",
+   "vascular surgery",
+   "transesophageal",
+   "cardiac anesthesia",
+   "coronary artery bypass",
+   "heparin",
+   "protamine"
+  ],
+  "sort_order": 140,
+  "active": true
+ },
+ {
+  "id": "thoracic-anesthesia",
+  "group_key": "anesthesia",
+  "name_it": "Anestesia toracica",
+  "name_en": "Thoracic anesthesia",
+  "pubmed_query": "((\"Thoracic Surgery\"[MeSH] OR \"Thoracic Surgical Procedures\"[MeSH] OR \"one-lung ventilation\"[tiab] OR \"lung resection\"[tiab] OR thoracoscop*[tiab] OR \"thoracic surgery\"[tiab]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR ventilation[tiab]))",
+  "keywords": [
+   "thoracic surgery",
+   "one-lung ventilation",
+   "lung resection",
+   "thoracoscopic",
+   "video-assisted",
+   "thoracic anesthesia",
+   "lung isolation"
+  ],
+  "sort_order": 150,
+  "active": true
+ },
+ {
+  "id": "obstetric-anesthesia",
+  "group_key": "anesthesia",
+  "name_it": "Anestesia ostetrica",
+  "name_en": "Obstetric anesthesia",
+  "pubmed_query": "((\"Anesthesia, Obstetrical\"[MeSH] OR \"Analgesia, Obstetrical\"[MeSH] OR \"labor analgesia\"[tiab] OR \"labour analgesia\"[tiab] OR \"post-dural puncture headache\"[tiab]) OR ((\"Cesarean Section\"[MeSH] OR cesarean[tiab] OR caesarean[tiab]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR spinal[tiab])))",
+  "keywords": [
+   "obstetric",
+   "labor analgesia",
+   "labour analgesia",
+   "cesarean",
+   "caesarean",
+   "post-dural puncture",
+   "parturient",
+   "neuraxial labor"
+  ],
+  "sort_order": 160,
+  "active": true
+ },
+ {
+  "id": "pediatric-anesthesia",
+  "group_key": "anesthesia",
+  "name_it": "Anestesia pediatrica",
+  "name_en": "Pediatric anesthesia",
+  "pubmed_query": "((anesthe*[tiab] OR anaesthe*[tiab] OR \"Anesthesia\"[MeSH]) AND (\"Child\"[MeSH] OR \"Infant\"[MeSH] OR pediatric*[tiab] OR paediatric*[tiab] OR neonat*[tiab]))",
+  "keywords": [
+   "pediatric",
+   "paediatric",
+   "children",
+   "infant",
+   "neonatal",
+   "child"
+  ],
+  "sort_order": 170,
+  "active": true
+ },
+ {
+  "id": "geriatric-anesthesia",
+  "group_key": "anesthesia",
+  "name_it": "Anestesia geriatrica",
+  "name_en": "Geriatric anesthesia",
+  "pubmed_query": "((anesthe*[tiab] OR anaesthe*[tiab] OR perioperative[tiab] OR \"Anesthesia\"[MeSH]) AND (\"Aged\"[MeSH] OR \"Frail Elderly\"[MeSH] OR elderly[tiab] OR geriatric[tiab] OR frailty[tiab] OR \"postoperative delirium\"[tiab] OR \"postoperative cognitive\"[tiab] OR \"older adults\"[tiab]))",
+  "keywords": [
+   "elderly",
+   "older adults",
+   "geriatric",
+   "frailty",
+   "postoperative delirium",
+   "postoperative cognitive",
+   "aged"
+  ],
+  "sort_order": 180,
+  "active": true
+ },
+ {
+  "id": "monitoring",
+  "group_key": "anesthesia",
+  "name_it": "Monitoraggio",
+  "name_en": "Monitoring",
+  "pubmed_query": "((\"Monitoring, Physiologic\"[MeSH] OR \"Monitoring, Intraoperative\"[MeSH] OR \"depth of anesthesia\"[tiab] OR bispectral[tiab] OR \"processed EEG\"[tiab] OR \"neuromuscular monitoring\"[tiab] OR capnograph*[tiab] OR \"goal-directed\"[tiab] OR \"hypotension prediction\"[tiab]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR intraoperative[tiab] OR perioperative[tiab]))",
+  "keywords": [
+   "monitoring",
+   "depth of anesthesia",
+   "bispectral",
+   "processed eeg",
+   "neuromuscular monitoring",
+   "capnography",
+   "goal-directed",
+   "hypotension prediction",
+   "near-infrared"
+  ],
+  "sort_order": 190,
+  "active": true
+ },
+ {
+  "id": "perioperative",
+  "group_key": "anesthesia",
+  "name_it": "Medicina perioperatoria",
+  "name_en": "Perioperative medicine",
+  "pubmed_query": "(\"Perioperative Medicine\"[MeSH] OR \"Perioperative Care\"[MeSH] OR \"Postoperative Complications\"[MeSH] OR \"Preoperative Care\"[MeSH] OR ERAS[tiab] OR \"enhanced recovery\"[tiab] OR prehabilitation[tiab] OR \"intraoperative hypotension\"[tiab] OR \"postoperative pulmonary complications\"[tiab] OR \"noncardiac surgery\"[tiab] OR \"non-cardiac surgery\"[tiab])",
+  "keywords": [
+   "perioperative",
+   "postoperative complications",
+   "enhanced recovery",
+   "prehabilitation",
+   "intraoperative hypotension",
+   "noncardiac surgery",
+   "non-cardiac surgery",
+   "preoperative",
+   "postoperative outcome"
+  ],
+  "sort_order": 200,
+  "active": true
+ },
+ {
+  "id": "pain",
+  "group_key": "anesthesia",
+  "name_it": "Dolore",
+  "name_en": "Pain",
+  "pubmed_query": "(\"postoperative pain\"[MeSH] OR \"Analgesia\"[MeSH] OR \"Chronic Pain\"[MeSH] OR \"Analgesics, Opioid\"[MeSH] OR \"postoperative pain\"[tiab] OR \"multimodal analgesia\"[tiab] OR \"chronic postsurgical pain\"[tiab])",
+  "keywords": [
+   "postoperative pain",
+   "analgesia",
+   "chronic pain",
+   "opioid",
+   "multimodal analgesia",
+   "chronic postsurgical pain",
+   "analgesic"
+  ],
+  "sort_order": 210,
+  "active": true
+ },
+ {
+  "id": "ebm-stats",
+  "group_key": "cross",
+  "name_it": "EBM e statistica",
+  "name_en": "EBM and statistics",
+  "pubmed_query": "((\"Evidence-Based Medicine\"[MeSH] OR Bayesian[tiab] OR \"fragility index\"[tiab] OR \"minimal clinically important difference\"[tiab] OR \"win ratio\"[tiab] OR \"restricted mean survival\"[tiab] OR \"reporting guideline\"[tiab] OR CONSORT[tiab] OR \"trial design\"[tiab] OR \"adaptive trial\"[tiab]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR \"critical care\"[tiab] OR \"intensive care\"[tiab]))",
+  "keywords": [
+   "bayesian",
+   "fragility index",
+   "minimal clinically important",
+   "win ratio",
+   "restricted mean survival",
+   "consort",
+   "trial design",
+   "adaptive trial",
+   "evidence-based",
+   "statistical"
+  ],
+  "sort_order": 300,
+  "active": true
+ },
+ {
+  "id": "guidelines",
+  "group_key": "cross",
+  "name_it": "Linee guida",
+  "name_en": "Guidelines",
+  "pubmed_query": "((\"Practice Guideline\"[pt] OR \"Guideline\"[pt] OR guideline*[ti] OR \"consensus statement\"[ti] OR \"recommendations\"[ti]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR \"critical care\"[tiab] OR \"intensive care\"[tiab] OR \"critically ill\"[tiab] OR perioperative[tiab]))",
+  "keywords": [
+   "guideline",
+   "consensus statement",
+   "recommendations",
+   "practice advisory",
+   "position statement"
+  ],
+  "sort_order": 310,
+  "active": true
+ },
+ {
+  "id": "patient-safety",
+  "group_key": "cross",
+  "name_it": "Sicurezza del paziente",
+  "name_en": "Patient safety",
+  "pubmed_query": "((\"Patient Safety\"[MeSH] OR \"Medical Errors\"[MeSH] OR \"Checklist\"[MeSH] OR \"Safety Management\"[MeSH] OR \"closed claims\"[tiab] OR \"human factors\"[tiab] OR \"adverse events\"[ti]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR \"intensive care\"[tiab] OR perioperative[tiab] OR \"critical care\"[tiab]))",
+  "keywords": [
+   "patient safety",
+   "medical errors",
+   "checklist",
+   "closed claims",
+   "human factors",
+   "adverse event",
+   "critical incident"
+  ],
+  "sort_order": 320,
+  "active": true
+ },
+ {
+  "id": "transfusion-hemostasis",
+  "group_key": "cross",
+  "name_it": "Trasfusioni ed emostasi",
+  "name_en": "Transfusion and hemostasis",
+  "pubmed_query": "((\"Blood Transfusion\"[MeSH] OR \"Blood Coagulation Disorders\"[MeSH] OR \"Hemostasis\"[MeSH] OR \"Tranexamic Acid\"[MeSH] OR \"patient blood management\"[tiab] OR \"massive transfusion\"[tiab] OR viscoelastic[tiab] OR fibrinogen[tiab] OR \"prothrombin complex\"[tiab] OR Anticoagulants[MeSH]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR perioperative[tiab] OR \"critical care\"[tiab] OR \"intensive care\"[tiab] OR trauma[tiab] OR surgery[tiab]))",
+  "keywords": [
+   "transfusion",
+   "coagulopathy",
+   "hemostasis",
+   "tranexamic",
+   "patient blood management",
+   "massive transfusion",
+   "viscoelastic",
+   "fibrinogen",
+   "prothrombin complex",
+   "bleeding"
+  ],
+  "sort_order": 330,
+  "active": true
+ },
+ {
+  "id": "antimicrobial-stewardship",
+  "group_key": "cross",
+  "name_it": "Antimicrobial stewardship",
+  "name_en": "Antimicrobial stewardship",
+  "pubmed_query": "((\"Antimicrobial Stewardship\"[MeSH] OR \"Anti-Bacterial Agents\"[MeSH] OR antibiotic*[tiab] OR antimicrobial*[tiab] OR procalcitonin[tiab] OR \"de-escalation\"[tiab]) AND (\"Critical Illness\"[MeSH] OR \"Intensive Care Units\"[MeSH] OR \"intensive care\"[tiab] OR ICU[tiab] OR perioperative[tiab] OR \"surgical prophylaxis\"[tiab]))",
+  "keywords": [
+   "antimicrobial stewardship",
+   "antibiotic",
+   "procalcitonin",
+   "de-escalation",
+   "duration of therapy",
+   "surgical prophylaxis",
+   "beta-lactam"
+  ],
+  "sort_order": 340,
+  "active": true
+ },
+ {
+  "id": "medical-tech",
+  "group_key": "cross",
+  "name_it": "Tecnologie mediche",
+  "name_en": "Medical technology",
+  "pubmed_query": "((\"Artificial Intelligence\"[MeSH] OR \"Machine Learning\"[MeSH] OR \"Telemedicine\"[MeSH] OR \"Point-of-Care Systems\"[MeSH] OR \"point-of-care ultrasound\"[tiab] OR \"closed-loop\"[tiab] OR wearable[tiab] OR robotic[tiab] OR \"decision support\"[tiab]) AND (anesthe*[tiab] OR anaesthe*[tiab] OR \"critical care\"[tiab] OR \"intensive care\"[tiab]))",
+  "keywords": [
+   "artificial intelligence",
+   "machine learning",
+   "telemedicine",
+   "point-of-care ultrasound",
+   "closed-loop",
+   "wearable",
+   "robotic",
+   "decision support",
+   "deep learning"
+  ],
+  "sort_order": 350,
+  "active": true
+ }
+]

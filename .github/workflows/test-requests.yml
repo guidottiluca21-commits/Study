@@ -1,0 +1,30 @@
+name: Test-send requests
+# Elabora le richieste "Invia un'e-mail di prova a me" fatte dagli utenti (max 3 al giorno ciascuno).
+on:
+  schedule:
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: test-requests
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          EMAIL_DAILY_LIMIT: ${{ vars.EMAIL_DAILY_LIMIT }}
+          SEND_ALLOWLIST: ${{ vars.SEND_ALLOWLIST }}
+        run: npm run pipeline -- requests
