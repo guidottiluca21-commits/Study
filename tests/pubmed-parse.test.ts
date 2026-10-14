@@ -39,6 +39,12 @@ describe('parsePubmedXml (record reali di PubMed)', () => {
     }
   });
 
+  it('decodifica i riferimenti di carattere (es. &#x3b2; -> β) e le entità nei titoli', () => {
+    const r = by('27145012');
+    expect(r.title).toMatch(/^11β-Hydroxysteroid/);
+    for (const x of recs) expect(x.title).not.toMatch(/&#x?[0-9a-f]+;|&amp;|&lt;/i);
+  });
+
   it('data di inserimento in PubMed (entrez) presente nei record recenti', () => {
     expect(by('42827265').entrez_date).toMatch(/^2026-/);
   });

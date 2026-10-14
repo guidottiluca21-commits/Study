@@ -98,6 +98,8 @@ const parser = new XMLParser({
   parseTagValue: false,
   parseAttributeValue: false,
   trimValues: true,
+  processEntities: true,
+  htmlEntities: true,
   isArray: (name) =>
     ['PubmedArticle', 'AbstractText', 'Author', 'PublicationType', 'MeshHeading', 'ArticleId', 'ELocationID', 'PubMedPubDate', 'CommentsCorrections'].includes(name),
 });

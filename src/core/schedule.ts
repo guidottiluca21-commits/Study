@@ -66,3 +66,17 @@ export function decideRun(now: Date, opts: { force?: boolean } = {}): RunDecisio
   const waitMs = Math.max(0, sendAt.getTime() - now.getTime());
   return { ...base, run: true, reason: waitMs ? `attesa fino alle ${SEND_HOUR}:00 a Roma` : 'ora di invio già raggiunta', waitMs, late: minutes >= SEND_HOUR * 60 + 30 };
 }
+
+/** Prossimo invio programmato (lunedì 06:00 a Roma) strettamente successivo a `now`. */
+export function nextSendInstant(now: Date): Date {
+  const thisWeek = romeLocalToUtc(weekStartRome(now), SEND_HOUR);
+  if (thisWeek.getTime() > now.getTime()) return thisWeek;
+  const [y, m, d] = weekStartRome(now).split('-').map(Number) as [number, number, number];
+  const next = new Date(Date.UTC(y, m - 1, d + 7));
+  return romeLocalToUtc(`${next.getUTCFullYear()}-${pad(next.getUTCMonth() + 1)}-${pad(next.getUTCDate())}`, SEND_HOUR);
+}
+
+/** Lunedì (YYYY-MM-DD) della settimana a cui appartiene il prossimo invio. */
+export function nextWeekStart(now: Date): string {
+  return weekStartRome(nextSendInstant(now));
+}

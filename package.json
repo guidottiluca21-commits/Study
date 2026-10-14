@@ -13,7 +13,10 @@
     "pipeline": "tsx src/pipeline/cli.ts",
     "db:migrate": "tsx src/pipeline/cli.ts migrate",
     "db:seed": "tsx src/pipeline/cli.ts seed",
-    "curriculum:verify": "tsx src/pipeline/cli.ts verify-curriculum"
+    "curriculum:verify": "tsx src/pipeline/cli.ts verify-curriculum",
+    "build:demo": "VITE_ENABLE_DEMO=1 vite build --outDir ../../dist-demo",
+    "test:e2e": "npm run build:demo && vitest run -c vitest.e2e.config.ts",
+    "test:live": "NODE_USE_ENV_PROXY=1 vitest run -c vitest.live.config.ts"
   },
   "engines": {
     "node": ">=20"

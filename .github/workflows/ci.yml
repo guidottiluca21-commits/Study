@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: Test end-to-end dell'interfaccia (modalità demo, Chromium + axe)
+        run: |
+          npx playwright-core install chromium
+          export PLAYWRIGHT_BROWSERS_PATH=$HOME/.cache/ms-playwright
+          npm run build:demo
+          CHROMIUM_PATH=$(node -e "console.log(require('playwright-core').chromium.executablePath())") npx vitest run -c vitest.e2e.config.ts

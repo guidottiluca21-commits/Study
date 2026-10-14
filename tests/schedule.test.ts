@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { decideRun, romeLocalToUtc, romeParts, weekStartRome } from '../src/core/schedule';
+import { decideRun, nextSendInstant, nextWeekStart, romeLocalToUtc, romeParts, weekStartRome } from '../src/core/schedule';
 
 const iso = (d: Date) => d.toISOString();
 
@@ -55,5 +55,16 @@ describe('decisione di esecuzione con DUE cron (03:15Z e 04:15Z)', () => {
   it('non parte negli altri giorni, salvo force', () => {
     expect(decideRun(new Date('2026-10-13T03:15:00Z')).run).toBe(false);
     expect(decideRun(new Date('2026-10-13T03:15:00Z'), { force: true }).run).toBe(true);
+  });
+});
+
+describe('prossimo invio (per il cruscotto)', () => {
+  it('prima delle 06:00 del lunedì è lo stesso lunedì; dopo, il lunedì successivo', () => {
+    expect(iso(nextSendInstant(new Date('2026-10-12T03:59:00Z')))).toBe('2026-10-12T04:00:00.000Z');
+    expect(iso(nextSendInstant(new Date('2026-10-12T04:00:00Z')))).toBe('2026-10-19T04:00:00.000Z');
+    expect(nextWeekStart(new Date('2026-10-14T10:00:00Z'))).toBe('2026-10-19');
+  });
+  it('attraversa il passaggio all\'ora solare: lunedì 26 ottobre alle 06:00 Roma = 05:00Z', () => {
+    expect(iso(nextSendInstant(new Date('2026-10-20T10:00:00Z')))).toBe('2026-10-26T05:00:00.000Z');
   });
 });
