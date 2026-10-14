@@ -15,10 +15,8 @@ import { PubmedClient } from '../core/pubmed-client.ts';
 import { buildCategoryTerm, computeSearchWindow, excludedPubType } from '../core/pubmed.ts';
 import { classifyArticle } from '../core/classify.ts';
 import { FORMULA_VERSION, scoreImportance } from '../core/scoring.ts';
-import { rankForUser } from '../core/rank.ts';
-import { pickCoreItem } from '../core/curriculum.ts';
-import { planWeek } from '../core/planner.ts';
-import { composeNewsletter, type NewsletterOutput } from '../core/newsletter.ts';
+import { buildIssue } from '../core/issue.ts';
+import type { CorePick } from '../core/curriculum.ts';
 import { romeParts, weekStartRome } from '../core/schedule.ts';
 import { defaultSleep } from '../core/retry.ts';
 import type { RankedItem } from '../core/types.ts';
@@ -177,43 +175,18 @@ async function pipeline(o: RunOptions, q: Queryable, tx: TxRunner, weekStart: st
     try {
       if (await S.existingIssue(q, user.id, weekStart)) { st.issues_reused = (st.issues_reused as number) + 1; continue; }
       const prog = await S.loadUserProgress(q, user.id);
-      const core = pickCoreItem({ topics: curriculum.topics, items: curriculum.items, progress: prog.coreProgress, prefs: user.prefs, today: todayRome });
-      const ranking = rankForUser(candidates, user.prefs, {
-        alreadyReceived: prog.alreadyReceived, coreMinutes: core?.item.reading_minutes ?? 0, coreCount: core ? 1 : 0, categoryNames: catNames,
-      });
-      const recent = ranking.selected;
-      if (!recent.length && !core) { st.skipped_no_content = (st.skipped_no_content as number) + 1; continue; }
-
-      const planItems = [
-        ...(core ? [{ key: 'core', minutes: core.item.reading_minutes }] : []),
-        ...recent.map((r) => ({ key: r.article.pmid, minutes: r.minutes })),
-      ];
-      const plan = planWeek(planItems, user.prefs.rest_days);
-      const dayOf = new Map<string, number>();
-      plan.days.forEach((d) => d.items.forEach((it) => dayOf.set(it.key, d.day)));
-      const prereqTitles = core ? core.item.prerequisites.map((id) => curriculum.items.find((i) => i.id === id)?.title).filter(Boolean) as string[] : [];
-      const topicTitle = core ? core.topic.title_it : '';
-
-      const out: NewsletterOutput = composeNewsletter({
-        weekStart, userName: user.display_name, recent,
-        core: core ? { pick: core, topicTitle, prerequisiteTitles: prereqTitles } : null,
-        plan, planLabels: { core: core ? `Core: ${core.item.title}` : '', ...Object.fromEntries(recent.map((r) => [r.article.pmid, r.article.title])) },
-        transparency: {
-          searchedAt, windowFrom: ymd(win.from), windowTo: ymd(win.to), overlapDays: 3, candidatesConsidered: ranking.considered,
-          alreadyReceived: ranking.excluded.already_received, belowThreshold: ranking.excluded.below_threshold,
-          notes: [
-            ...ranking.notes,
-            ...(searchComplete ? [] : ['Alcune ricerche per categoria non sono andate a buon fine: la selezione potrebbe essere incompleta.']),
-          ],
-          scoringVersion: FORMULA_VERSION,
-        },
-        categoryNames: catNames,
+      const built = buildIssue({
+        weekStart, now, todayRome, userName: user.display_name, prefs: user.prefs, candidates, curriculum,
+        alreadyReceived: prog.alreadyReceived, coreProgress: prog.coreProgress, categoryNames: catNames,
+        window: { from: ymd(win.from), to: ymd(win.to) }, searchedAt,
+        notes: searchComplete ? [] : ['Alcune ricerche per categoria non sono andate a buon fine: la selezione potrebbe essere incompleta.'],
         links: {
           site: o.config.siteUrl, manage: `${o.config.siteUrl}#/preferences`, privacy: `${o.config.siteUrl}#/privacy`,
           unsubscribe: `${o.config.siteUrl}#/unsubscribe/${user.unsubscribe_token}`,
         },
-        now,
       });
+      const { out, recent, core, plan, dayOf } = built;
+      if (!recent.length && !core) { st.skipped_no_content = (st.skipped_no_content as number) + 1; continue; }
 
       const items = buildItems(recent, core, dayOf);
       const created = await tx((t) => S.createIssue(t, {
@@ -239,7 +212,7 @@ async function pipeline(o: RunOptions, q: Queryable, tx: TxRunner, weekStart: st
   return { status: failed ? 'partial' : 'success', weekStart, stats: st, previews, errors, warnings };
 }
 
-function buildItems(recent: RankedItem[], core: ReturnType<typeof pickCoreItem>, dayOf: Map<string, number>): S.IssueItemInput[] {
+function buildItems(recent: RankedItem[], core: CorePick | null, dayOf: Map<string, number>): S.IssueItemInput[] {
   const items: S.IssueItemInput[] = [];
   let pos = 1;
   if (core) {
@@ -353,26 +326,22 @@ export async function processTestRequests(o: Omit<RunOptions, 'weekStart'>): Pro
         const u = users.find((x) => x.id === r.user_id);
         const prefs = u?.prefs ?? { topics: {}, study_types: [], max_weekly_reads: 6, weekly_minutes: 120, rest_days: [], core_enabled: true, core_topic_ids: [] };
         const prog = await S.loadUserProgress(q, r.user_id);
-        const core = pickCoreItem({ topics: curriculum.topics, items: curriculum.items, progress: prog.coreProgress, prefs, today: todayRome });
-        const ranking = rankForUser(candidates, prefs, { alreadyReceived: prog.alreadyReceived, coreMinutes: core?.item.reading_minutes ?? 0, coreCount: core ? 1 : 0, categoryNames: catNames });
-        const plan = planWeek([...(core ? [{ key: 'core', minutes: core.item.reading_minutes }] : []), ...ranking.selected.map((x) => ({ key: x.article.pmid, minutes: x.minutes }))], prefs.rest_days);
         const win = computeSearchWindow(o.now, null);
-        const out = composeNewsletter({
-          weekStart, userName: null, recent: ranking.selected,
-          core: core ? { pick: core, topicTitle: core.topic.title_it, prerequisiteTitles: [] } : null,
-          plan, planLabels: { core: core ? `Core: ${core.item.title}` : '', ...Object.fromEntries(ranking.selected.map((x) => [x.article.pmid, x.article.title])) },
-          transparency: { searchedAt: o.now, windowFrom: ymd(win.from), windowTo: ymd(win.to), overlapDays: 3, candidatesConsidered: ranking.considered, alreadyReceived: ranking.excluded.already_received, belowThreshold: ranking.excluded.below_threshold, notes: ['E-mail di PROVA: non modifica la tua libreria né il percorso Core Knowledge.'], scoringVersion: FORMULA_VERSION },
-          categoryNames: catNames,
+        const built = buildIssue({
+          weekStart, now: o.now, todayRome, userName: null, prefs, candidates, curriculum,
+          alreadyReceived: prog.alreadyReceived, coreProgress: prog.coreProgress, categoryNames: catNames,
+          window: { from: ymd(win.from), to: ymd(win.to) }, searchedAt: o.now,
+          notes: ['E-mail di PROVA: non modifica la tua libreria né il percorso Core Knowledge.'],
           links: { site: o.config.siteUrl, manage: `${o.config.siteUrl}#/preferences`, privacy: `${o.config.siteUrl}#/privacy`, unsubscribe: `${o.config.siteUrl}#/unsubscribe/${a.token}` },
-          now: o.now,
         });
+        const { out, recent: testRecent, core } = built;
         const msg = messageFor(o.config.siteUrl, { email: a.email, subject: `[TEST] ${out.subject}`, html: out.html, text_body: out.text, unsubscribe_token: a.token, idempotency_key: key });
         const res = await o.mailer.send(msg);
         if (o.mode === 'live') {
           await q.query(`insert into public.email_deliveries (issue_id, user_id, kind, idempotency_key, status, attempts, provider_message_id, sent_at) values (null,$1,'test',$2,'sent',1,$3,now()) on conflict (idempotency_key) do nothing`, [r.user_id, key, res.providerMessageId ?? null]);
           await S.bumpQuota(q, 'email', period, 1);
         }
-        await finish('done', { sent: true, recent: ranking.selected.length, core: core?.item.id ?? null });
+        await finish('done', { sent: true, recent: testRecent.length, core: core?.item.id ?? null });
         sent++;
       } catch (e) {
         failed++;
