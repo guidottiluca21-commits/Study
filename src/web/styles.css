@@ -164,8 +164,8 @@ button, .btn, .chip, a, label, select { touch-action: manipulation; }
   .prio-row .seg { display: flex; width: 100%; }
   .prio-row .seg label { flex: 1; }
   .prio-row .seg span { width: 100%; }
-  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .actions .btn { width: 100%; }
+  .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .actions .btn { width: 100%; min-width: 0; text-align: center; overflow-wrap: anywhere; }
   .savebar .btn { flex: 1 1 100%; }
   .btn { min-height: 48px; }
   .card { padding: 14px; }
@@ -174,3 +174,6 @@ button, .btn, .chip, a, label, select { touch-action: manipulation; }
   .frame { min-height: 75vh; }
   .grid2 { gap: 20px; }
 }
+
+.item-title, .item-title a, .list a, .meta { overflow-wrap: anywhere; }
+.btn { min-width: 0; }
