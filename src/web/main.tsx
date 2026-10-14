@@ -16,6 +16,12 @@ async function pickApi(): Promise<Api | null> {
   return null;
 }
 
+// Il primo progetto pubblicato su questo indirizzo registrava un service worker che può servire versioni vecchie del sito: lo si disattiva.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then((rs) => rs.forEach((r) => void r.unregister())).catch(() => undefined);
+  if ('caches' in window) caches.keys().then((ks) => ks.forEach((k) => void caches.delete(k))).catch(() => undefined);
+}
+
 pickApi().then((api) => {
   const root = createRoot(document.getElementById('root')!);
   root.render(

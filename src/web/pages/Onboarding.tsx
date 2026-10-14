@@ -38,7 +38,7 @@ export function PriorityList({ state, topics, setTopics }: { state: UserState; t
   return (
     <ul className="list">
       {state.categories.filter((c) => topics[c.id]).map((c) => (
-        <li key={c.id} className="row between">
+        <li key={c.id} className="row between prio-row">
           <span id={`pl-${c.id}`}>{c.name_it}</span>
           <Priority name={`prio-${c.id}`} value={topics[c.id]!} label={`Priorità per ${c.name_it}`} onChange={(v) => setTopics({ ...topics, [c.id]: v })} />
         </li>
